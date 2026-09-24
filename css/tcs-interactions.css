@@ -2054,7 +2054,7 @@ html {
 }
 
 /* ==========================================================================
-   TCS Minimal Graphy-Inspired Footer (Approved Master Layout)
+   TCS Minimal Graphy-Inspired Footer (Exact Geometric Reference)
    ========================================================================== */
 .tcs-graphy-footer {
   background-color: #ffffff !important;
@@ -2067,9 +2067,9 @@ html {
 }
 
 .tcs-footer-container {
-  max-width: 1280px !important;
+  max-width: 1080px !important;
   margin: 0 auto !important;
-  padding: 68px 32px 0 32px !important;
+  padding: 56px 24px 0 24px !important;
   box-sizing: border-box !important;
 }
 
@@ -2077,11 +2077,12 @@ html {
   display: flex !important;
   justify-content: space-between !important;
   align-items: flex-start !important;
-  gap: 48px !important;
+  gap: 56px !important;
 }
 
 .tcs-footer-brand {
-  max-width: 340px !important;
+  width: 290px !important;
+  max-width: 290px !important;
   flex-shrink: 0 !important;
 }
 
@@ -2091,24 +2092,24 @@ html {
 }
 
 .tcs-footer-logo {
-  height: 36px !important;
+  height: 56px !important; /* ~1.6x previous 36px, maintaining exact aspect ratio */
   width: auto !important;
   object-fit: contain !important;
   display: block !important;
 }
 
 .tcs-footer-tagline {
-  font-size: 14.5px !important;
-  line-height: 1.6 !important;
+  font-size: 13.5px !important;
+  line-height: 1.55 !important;
   color: #52525b !important;
-  margin: 18px 0 24px 0 !important;
+  margin: 14px 0 18px 0 !important;
   font-weight: 400 !important;
 }
 
 .tcs-footer-socials {
   display: flex !important;
   align-items: center !important;
-  gap: 18px !important;
+  gap: 16px !important;
 }
 
 .tcs-footer-social-btn {
@@ -2120,6 +2121,11 @@ html {
   transition: color 0.15s ease, transform 0.15s ease !important;
 }
 
+.tcs-footer-social-btn svg {
+  width: 19px !important;
+  height: 19px !important;
+}
+
 .tcs-footer-social-btn:hover {
   color: #0B3D91 !important;
   transform: translateY(-1px) !important;
@@ -2127,21 +2133,30 @@ html {
 
 .tcs-footer-columns {
   display: flex !important;
-  gap: 5rem !important;
+  gap: 44px !important;
   justify-content: flex-end !important;
-  flex: 1 !important;
+  flex-shrink: 0 !important;
 }
 
-.tcs-footer-col {
-  min-width: 140px !important;
+.tcs-footer-col:nth-child(1) {
+  width: 245px !important;
+}
+
+.tcs-footer-col:nth-child(2) {
+  width: 195px !important;
+}
+
+.tcs-footer-col:nth-child(3) {
+  width: 125px !important;
 }
 
 .tcs-footer-col-title {
-  font-size: 15px !important;
+  font-size: 14.5px !important;
   font-weight: 600 !important;
   color: #09090b !important;
-  margin: 0 0 20px 0 !important;
+  margin: 0 0 16px 0 !important;
   letter-spacing: -0.01em !important;
+  line-height: 1.2 !important;
 }
 
 .tcs-footer-links {
@@ -2150,16 +2165,17 @@ html {
   margin: 0 !important;
   display: flex !important;
   flex-direction: column !important;
-  gap: 13px !important;
+  gap: 10px !important;
 }
 
 .tcs-footer-link {
-  font-size: 14px !important;
+  font-size: 13.5px !important;
   color: #52525b !important;
   text-decoration: none !important;
   transition: color 0.15s ease !important;
   display: inline-block !important;
-  line-height: 1.45 !important;
+  line-height: 1.4 !important;
+  white-space: nowrap !important;
 }
 
 .tcs-footer-link:hover {
@@ -2169,7 +2185,7 @@ html {
 .tcs-footer-divider {
   border: 0 !important;
   border-top: 1px solid #e4e4e7 !important;
-  margin: 56px 0 0 0 !important;
+  margin: 40px 0 0 0 !important;
   padding: 0 !important;
   width: 100% !important;
 }
@@ -2178,13 +2194,13 @@ html {
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
-  padding: 26px 0 36px 0 !important;
-  gap: 20px !important;
+  padding: 20px 0 28px 0 !important;
+  gap: 16px !important;
   flex-wrap: wrap !important;
 }
 
 .tcs-footer-copyright {
-  font-size: 13.5px !important;
+  font-size: 13px !important;
   color: #71717a !important;
   margin: 0 !important;
   font-weight: 400 !important;
@@ -2193,11 +2209,11 @@ html {
 .tcs-footer-legal {
   display: flex !important;
   align-items: center !important;
-  gap: 28px !important;
+  gap: 24px !important;
 }
 
 .tcs-footer-legal-link {
-  font-size: 13.5px !important;
+  font-size: 13px !important;
   color: #71717a !important;
   text-decoration: underline !important;
   text-underline-offset: 3px !important;
@@ -2208,48 +2224,67 @@ html {
   color: #09090b !important;
 }
 
-/* Responsive adjustments */
+/* Tablet (max-width: 1024px) */
 @media (max-width: 1024px) {
   .tcs-footer-container {
-    padding: 48px 24px 0 24px !important;
+    max-width: 100% !important;
+    padding: 44px 24px 0 24px !important;
   }
   .tcs-footer-main {
     flex-direction: column !important;
-    gap: 40px !important;
+    gap: 36px !important;
   }
   .tcs-footer-brand {
+    width: 100% !important;
     max-width: 100% !important;
   }
   .tcs-footer-columns {
     width: 100% !important;
+    gap: 32px !important;
+    flex-wrap: wrap !important;
     justify-content: flex-start !important;
-    gap: 3.5rem !important;
+  }
+  .tcs-footer-col:nth-child(1),
+  .tcs-footer-col:nth-child(2),
+  .tcs-footer-col:nth-child(3) {
+    width: auto !important;
+    min-width: 180px !important;
   }
   .tcs-footer-divider {
-    margin-top: 44px !important;
+    margin-top: 36px !important;
   }
 }
 
+/* Mobile (max-width: 640px) */
 @media (max-width: 640px) {
   .tcs-footer-container {
-    padding: 40px 18px 0 18px !important;
+    padding: 36px 18px 0 18px !important;
   }
   .tcs-footer-columns {
     display: grid !important;
     grid-template-columns: 1fr !important;
-    gap: 28px !important;
+    gap: 26px !important;
+  }
+  .tcs-footer-col:nth-child(1),
+  .tcs-footer-col:nth-child(2),
+  .tcs-footer-col:nth-child(3) {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+  .tcs-footer-link {
+    white-space: normal !important;
   }
   .tcs-footer-bottom {
     flex-direction: column !important;
     align-items: flex-start !important;
-    gap: 16px !important;
-    padding: 22px 0 30px 0 !important;
+    gap: 14px !important;
+    padding: 16px 0 24px 0 !important;
   }
   .tcs-footer-legal {
-    gap: 20px !important;
+    gap: 18px !important;
   }
   .tcs-footer-divider {
-    margin-top: 36px !important;
+    margin-top: 30px !important;
   }
 }
 
