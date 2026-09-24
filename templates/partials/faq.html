@@ -1,0 +1,154 @@
+<section aria-labelledby="faq-heading" class="relative isolate mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-8 sm:pb-10 md:pb-14 z-30" id="custom-faq-container"><div class="ifcFaqInner"><div class="ifcFaqAccentBar"></div><h2 class="ifcFaqHeading" id="faq-heading">Frequently asked questions</h2><p class="ifcFaqSubtitle">Common questions about {{ page.hero_title }}.</p><div class="ifcFaqGrid">
+        {% for faq in page.faqs %}
+        <div class="ifcFaqCard">
+<button aria-controls="faq-answer-{{ loop.index }}" aria-expanded="false" class="ifcFaqCardBtn" id="faq-heading-{{ loop.index }}" type="button">
+<span class="ifcFaqCardQ">{{ faq.question }}</span>
+<svg aria-hidden="true" class="lucide lucide-chevron-down ifcFaqCardChevron" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+<div aria-labelledby="faq-heading-{{ loop.index }}" class="overflow-hidden transition-[grid-template-rows] duration-300 grid grid-rows-[0fr]" id="faq-answer-{{ loop.index }}" role="region" style="grid-template-rows: 0fr;">
+<div class="min-h-0">
+<div class="ifcFaqCardA">{{ faq.answer | safe }}</div>
+</div>
+</div>
+</div>
+        {% endfor %}
+        </div><div class="ifcFaqBtnRow"><button class="ifcFaqBtn ifcFaqBtnPrimary">Load more questions</button></div></div><style>
+        .ifcFaqSection {
+          background: var(--color-surface);
+          padding: 48px 20px 56px;
+        }
+
+        .ifcFaqInner {
+          margin: 0 auto;
+        }
+
+        .ifcFaqAccentBar {
+          width: 40px;
+          height: 3px;
+          border-radius: 2px;
+          background: var(--color-brand);
+          margin-bottom: 16px;
+        }
+
+        .ifcFaqHeading {
+          font-size: 22px;
+          line-height: 1.25;
+          color: var(--color-text);
+          margin: 0 0 4px;
+          font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        @media (min-width: 640px) { .ifcFaqHeading { font-size: 26px; } }
+
+        .ifcFaqSubtitle {
+          font-size: 13px;
+          color: var(--color-text-muted);
+          margin: 0 0 24px;
+          line-height: 1.5;
+          font-family: var(--font-inter), sans-serif;
+        }
+
+        .ifcFaqGrid {
+          display: grid;
+          grid-template-columns: 1fr;
+          align-items: start;
+          gap: 10px;
+        }
+        @media (min-width: 768px) {
+          .ifcFaqGrid { grid-template-columns: 1fr 1fr; gap: 12px; }
+        }
+
+        .ifcFaqCard {
+          background: var(--color-surface);
+          border: 1px solid var(--color-border);
+          border-radius: 12px;
+          overflow: hidden;
+          transition: border-color 0.18s, box-shadow 0.18s;
+        }
+        .ifcFaqCard:hover {
+          border-color: var(--color-brand);
+          box-shadow: 0 0 0 3px rgba(16,185,129,0.07);
+        }
+        .ifcFaqCardOpen {
+          border-color: var(--color-brand) !important;
+          box-shadow: 0 0 0 3px rgba(16,185,129,0.08);
+        }
+
+        .ifcFaqCardBtn {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+          padding: 16px 18px;
+          background: none;
+          border: 0;
+          cursor: pointer;
+          text-align: left;
+        }
+
+        .ifcFaqCardQ {
+          font-size: 13px;
+          line-height: 1.45;
+          font-weight: 500;
+          color: var(--color-text);
+          flex: 1;
+          font-family: var(--font-inter), sans-serif;
+        }
+
+        .ifcFaqCardChevron {
+          flex-shrink: 0;
+          width: 16px;
+          height: 16px;
+          color: #9ca3af;
+          transition: transform 0.25s ease, color 0.18s;
+        }
+        .ifcFaqCardOpen .ifcFaqCardChevron { color: var(--color-brand); }
+        .ifcFaqCardChevronOpen {
+          transform: rotate(180deg);
+          color: var(--color-brand);
+        }
+
+        .ifcFaqCardA {
+          padding: 0 18px 14px;
+          font-size: 13px;
+          line-height: 1.65;
+          color: var(--color-text-muted);
+          font-family: var(--font-inter), sans-serif;
+        }
+
+        .ifcFaqBtnRow {
+          display: flex;
+          gap: 10px;
+          justify-content: center;
+          margin-top: 24px;
+          flex-wrap: wrap;
+        }
+
+        .ifcFaqBtn {
+          padding: 9px 22px;
+          font-size: 13px;
+          font-family: var(--font-inter), sans-serif;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background 0.15s, border-color 0.15s, color 0.15s;
+          font-weight: 500;
+        }
+        .ifcFaqBtnPrimary {
+          background: var(--color-brand);
+          color: var(--color-surface);
+          border: 1px solid var(--color-brand);
+        }
+        .ifcFaqBtnPrimary:hover {
+          background: var(--color-brand-hover);
+          border-color: var(--color-brand-hover);
+        }
+        .ifcFaqBtnSecondary {
+          background: transparent;
+          color: var(--color-text-muted);
+          border: 1px solid var(--color-border);
+        }
+        .ifcFaqBtnSecondary:hover {
+          border-color: var(--color-brand);
+          color: var(--color-brand);
+        }
+      </style></section>

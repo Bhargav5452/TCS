@@ -1,0 +1,2183 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('./tcs-tokens.css');
+
+/* ==========================================================================
+   TCS Typography Design Tokens & Core Interaction Stylesheet
+   Centralized design system tokens for global consistency across all 116 pages
+   ========================================================================== */
+
+:root {
+    /* Font Family */
+    --tcs-font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    /* Responsive Fluid Typography Scale */
+    --tcs-font-size-hero-title: clamp(1.4rem, 3.8vw + 0.4rem, 2.25rem);
+    --tcs-font-size-hero-desc: clamp(0.8125rem, 0.8vw + 0.55rem, 0.9375rem);
+    --tcs-font-size-article-title: clamp(1.2rem, 2.8vw + 0.3rem, 1.625rem);
+    --tcs-font-size-section-h2: clamp(1.0625rem, 2vw + 0.25rem, 1.3rem);
+    --tcs-font-size-section-h3: clamp(0.9375rem, 1.5vw + 0.2rem, 1.1rem);
+    --tcs-font-size-section-h4: clamp(0.875rem, 0.8vw + 0.5rem, 0.9375rem);
+    --tcs-font-size-body: clamp(0.875rem, 0.4vw + 0.75rem, 0.9375rem);
+    --tcs-font-size-table: clamp(0.75rem, 0.5vw + 0.625rem, 0.875rem);
+    --tcs-font-size-faq-title: clamp(1.2rem, 2vw + 0.6rem, 1.625rem);
+    --tcs-font-size-faq-q: clamp(0.875rem, 0.6vw + 0.625rem, 0.9375rem);
+    --tcs-font-size-faq-a: clamp(0.8125rem, 0.5vw + 0.625rem, 0.90625rem);
+    --tcs-font-size-breadcrumb: clamp(0.75rem, 0.6vw + 0.55rem, 0.8125rem);
+    --tcs-font-size-caption: clamp(0.6875rem, 0.5vw + 0.5rem, 0.75rem);
+    --tcs-font-size-cta: clamp(0.875rem, 0.8vw + 0.6rem, 1rem);
+
+    /* Line Heights */
+    --tcs-line-height-tight: 1.28;
+    --tcs-line-height-heading: 1.35;
+    --tcs-line-height-subheading: 1.40;
+    --tcs-line-height-body: 1.65;
+    --tcs-line-height-faq: 1.65;
+
+    /* Font Weights */
+    --tcs-font-weight-light: 300;
+    --tcs-font-weight-regular: 400;
+    --tcs-font-weight-medium: 500;
+    --tcs-font-weight-semibold: 600;
+    --tcs-font-weight-bold: 700;
+}
+
+/* Mega menu hover styles & rock-solid diagonal hover protection */
+nav .group {
+    position: relative !important;
+}
+
+nav .group>a {
+    padding-top: 6px !important;
+    padding-bottom: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    cursor: pointer !important;
+}
+
+/* Invisible hover bridge: covers the vertical gap between trigger link and mega menu */
+nav .group>div.absolute.group-hover\:block:last-child::before,
+nav .group>div.absolute[class*="mt-3"]::before {
+    content: "" !important;
+    position: absolute !important;
+    top: -24px !important;
+    left: -20px !important;
+    right: -20px !important;
+    height: 30px !important;
+    background: transparent !important;
+    pointer-events: auto !important;
+    z-index: 50 !important;
+}
+
+/* Mega menu dropdown container display rules */
+.group:hover>.group-hover\:block,
+.group:hover .group-hover\:block,
+.group:focus-within>.group-hover\:block,
+.group:focus-within .group-hover\:block,
+.group.is-open>.group-hover\:block,
+.group.is-open .group-hover\:block {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+nav .group .group-hover\:block {
+    z-index: 1000 !important;
+}
+
+/* Ensure all sublinks in dropdowns are cleanly interactive */
+nav .group .group-hover\:block a,
+nav .group-hover\:block a {
+    cursor: pointer !important;
+    transition: color 0.15s ease-in-out !important;
+}
+
+nav .group .group-hover\:block a:hover,
+nav .group-hover\:block a:hover {
+    color: var(--tcs-accent, #2EA8F2) !important;
+}
+
+/* Sublinks / dropdown menu list font size (14px desktop, 12px mobile) - PRESERVED UNTOUCHED */
+nav .group .group-hover\:block a,
+nav .group .group-hover\:block a span,
+nav .group-hover\:block a,
+nav .group-hover\:block a span {
+    font-size: 14px !important;
+    line-height: 1.45 !important;
+}
+
+@media (max-width: 640px) {
+
+    nav .group .group-hover\:block a,
+    nav .group .group-hover\:block a span,
+    nav .group-hover\:block a,
+    nav .group-hover\:block a span {
+        font-size: 12px !important;
+    }
+}
+
+/* ==========================================================================
+   Centralized Typography Hierarchy (Aligned to Reference Design Tokens)
+   ========================================================================== */
+
+/* Main Content Article Title */
+.page-content h1,
+.read-more-content h1,
+.read-more-content .page-content h1,
+article h1 {
+    font-size: var(--tcs-font-size-article-title) !important;
+    line-height: var(--tcs-line-height-tight) !important;
+    font-weight: var(--tcs-font-weight-semibold) !important;
+    margin-bottom: 1.25rem !important;
+}
+
+/* Content Headings H2 */
+.page-content h2,
+.read-more-content h2,
+.read-more-content .page-content h2,
+article h2 {
+    font-size: var(--tcs-font-size-section-h2) !important;
+    line-height: var(--tcs-line-height-heading) !important;
+    font-weight: var(--tcs-font-weight-semibold) !important;
+    margin-top: 1.625rem !important;
+    margin-bottom: 0.75rem !important;
+}
+
+/* Content Subheadings H3 */
+.page-content h3,
+.read-more-content h3,
+.read-more-content .page-content h3,
+article h3 {
+    font-size: var(--tcs-font-size-section-h3) !important;
+    line-height: var(--tcs-line-height-subheading) !important;
+    font-weight: var(--tcs-font-weight-semibold) !important;
+    margin-top: 1.375rem !important;
+    margin-bottom: 0.625rem !important;
+}
+
+/* Content Subheadings H4 */
+.page-content h4,
+.read-more-content h4,
+.read-more-content .page-content h4,
+article h4 {
+    font-size: var(--tcs-font-size-section-h4) !important;
+    line-height: 1.45 !important;
+    font-weight: var(--tcs-font-weight-semibold) !important;
+}
+
+/* Body Paragraphs, Lists, and Text Content */
+.page-content,
+.read-more-content,
+.read-more-content .page-content {
+    font-size: var(--tcs-font-size-body) !important;
+    line-height: var(--tcs-line-height-body) !important;
+}
+
+.page-content p,
+.read-more-content p,
+.read-more-content .page-content p,
+article p {
+    font-size: var(--tcs-font-size-body) !important;
+    line-height: var(--tcs-line-height-body) !important;
+    font-weight: var(--tcs-font-weight-regular) !important;
+    margin-bottom: 1rem !important;
+}
+
+.page-content strong,
+.read-more-content strong,
+.read-more-content .page-content strong,
+article strong,
+.page-content b,
+article b {
+    font-weight: var(--tcs-font-weight-semibold) !important;
+}
+
+.page-content ul>li,
+.read-more-content ul>li,
+.read-more-content .page-content ul>li,
+.page-content ol>li,
+.read-more-content ol>li,
+.read-more-content .page-content ol>li,
+.page-content li,
+.read-more-content li,
+article li {
+    font-size: var(--tcs-font-size-body) !important;
+    line-height: var(--tcs-line-height-body) !important;
+    font-weight: var(--tcs-font-weight-regular) !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* Tables in Content */
+.page-content table,
+.read-more-content table,
+.read-more-content .page-content table {
+    font-size: var(--tcs-font-size-table) !important;
+}
+
+.page-content th,
+.read-more-content th,
+.read-more-content .page-content th,
+.read-more-content .page-content thead th {
+    font-size: var(--tcs-font-size-table) !important;
+    font-weight: var(--tcs-font-weight-semibold) !important;
+    line-height: 1.4 !important;
+}
+
+.page-content td,
+.read-more-content td,
+.read-more-content .page-content td,
+.read-more-content .page-content tbody td {
+    font-size: var(--tcs-font-size-table) !important;
+    font-weight: var(--tcs-font-weight-regular) !important;
+    line-height: 1.5 !important;
+}
+
+/* Hero description & section intros */
+section[role="banner"] p,
+div[id*="hero"] p,
+.journey_first_section_title+p {
+    font-size: var(--tcs-font-size-hero-desc) !important;
+    line-height: 1.55 !important;
+    font-weight: var(--tcs-font-weight-regular) !important;
+}
+
+/* Breadcrumb Navigation */
+main nav,
+nav[aria-label="Breadcrumb"],
+nav[aria-label="Breadcrumbs"] {
+    font-size: var(--tcs-font-size-breadcrumb) !important;
+}
+
+main nav a,
+main nav span {
+    font-size: var(--tcs-font-size-breadcrumb) !important;
+    font-weight: var(--tcs-font-weight-medium) !important;
+}
+
+/* FAQ Section Typography */
+.ifcFaqCardQ,
+button[aria-controls^="faq-answer-"] {
+    font-size: var(--tcs-font-size-faq-q) !important;
+    font-weight: var(--tcs-font-weight-medium) !important;
+    line-height: 1.45 !important;
+}
+
+.ifcFaqCardA,
+.ifcFaqCardA p,
+div[id^="faq-answer-"] p {
+    font-size: var(--tcs-font-size-faq-a) !important;
+    line-height: var(--tcs-line-height-faq) !important;
+    font-weight: var(--tcs-font-weight-regular) !important;
+}
+
+/* Sidebar Widgets: Related Guides & Consult Experts */
+.ifcSidebarCard,
+.related-guides a,
+div[class*="sidebar"] a,
+.ifcRelatedServices a {
+    font-size: var(--tcs-font-size-table) !important;
+    line-height: 1.5 !important;
+    font-weight: var(--tcs-font-weight-regular) !important;
+}
+
+/* ==========================================================================
+   Tirumala Centralized Brand Color Rules (Deep Navy #0B3D91 & Sky Blue #2EA8F2)
+   ========================================================================== */
+
+/* Solid dark navy/slate headings (replaces neon purple/pink gradients & midnight violet) */
+.page-content h1,
+.page-content h2,
+.page-content h3,
+.page-content h4,
+.read-more-content h1,
+.read-more-content h2,
+.read-more-content h3,
+.read-more-content h4,
+article h1,
+article h2,
+article h3,
+article h4,
+.journey_first_section_title,
+.journey_first_section_title h1,
+.journey_first_section_title h2,
+[id^="hero-title-"],
+#faq-heading,
+.tcs-faq-heading,
+#related-services-heading,
+#pricing-heading {
+    color: var(--tcs-text-heading, #0F172A) !important;
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+}
+
+/* Ensure child spans in headings are solid text without neon gradients */
+.journey_first_section_title span,
+[id^="hero-title-"] span,
+#pricing-heading span[class*="from-"] {
+    color: var(--tcs-text-heading, #0F172A) !important;
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+}
+
+/* In-Article content links (replaces legacy IndiaFilings teal) */
+.page-content a,
+.read-more-content .page-content a,
+article a {
+    color: var(--content-theme-color, #0B3D91) !important;
+    text-decoration: underline !important;
+    text-underline-offset: 2px !important;
+    transition: color 0.15s ease-in-out !important;
+}
+
+.page-content a:hover,
+.read-more-content .page-content a:hover,
+article a:hover {
+    color: var(--content-theme-color-hover, #2EA8F2) !important;
+}
+
+/* Primary buttons in content */
+.page-content .btn.btn-primary,
+.read-more-content .page-content .btn.btn-primary,
+.page-content-shortcode-btn {
+    background: var(--tcs-primary, #0B3D91) !important;
+    border-color: var(--tcs-primary, #0B3D91) !important;
+    color: #ffffff !important;
+}
+
+.page-content .btn.btn-primary:hover,
+.read-more-content .page-content .btn.btn-primary:hover,
+.page-content-shortcode-btn:hover {
+    background: var(--tcs-primary-hover, #082C6A) !important;
+    border-color: var(--tcs-primary-hover, #082C6A) !important;
+    color: #ffffff !important;
+}
+
+/* In-Article list checkmarks */
+.read-more-content .page-content ul>li::before,
+.read-more-content .page-content ol li ul>li::before,
+.read-more-content .page-content ul li ul>li::before {
+    border: 1px solid var(--tcs-accent-border, #BAE6FD) !important;
+    color: var(--tcs-primary, #0B3D91) !important;
+}
+
+/* Table top line & hover */
+.read-more-content .page-content .table-responsive::before {
+    background: var(--tcs-primary, #0B3D91) !important;
+}
+
+.read-more-content .page-content tbody tr:hover td,
+.read-more-content .page-content tbody tr:hover th {
+    background: var(--tcs-surface-hover, #F0F8FF) !important;
+}
+
+.read-more-content .page-content tbody tr:hover td:first-child,
+.read-more-content .page-content tbody tr:hover th:first-child {
+    border-left-color: var(--tcs-accent, #2EA8F2) !important;
+}
+
+/* Approved Sidebar CTA Gradient */
+aside a[class*="from-sky-600"],
+aside a[class*="from-[#0B3D91]"],
+.tcs-sidebar-cta {
+    background: var(--tcs-cta-gradient) !important;
+    color: #ffffff !important;
+}
+
+aside a[class*="from-sky-600"]:hover,
+aside a[class*="from-[#0B3D91]"]:hover,
+.tcs-sidebar-cta:hover {
+    background: var(--tcs-cta-gradient-hover) !important;
+}
+
+/* Sidebar decorative top bar */
+aside div[class*="bg-gradient-to-r"][class*="via-teal-400"],
+aside div[class*="bg-gradient-to-r"][class*="from-[#0B3D91]"] {
+    background: var(--tcs-cta-gradient) !important;
+}
+
+/* Sidebar Why Choose Tirumala checkmark boxes */
+aside div[class*="bg-teal-100"],
+aside div[class*="bg-[#F0F8FF]"] {
+    background-color: var(--tcs-accent-light, #F0F8FF) !important;
+    border-color: var(--tcs-accent-border, #BAE6FD) !important;
+    color: var(--tcs-primary, #0B3D91) !important;
+}
+
+/* Expert Consultation Card Profile Group (Subtle supporting trust element, ~50% scaled) */
+aside img[src*="consult-expert-all-page.png"],
+img[alt*="TCS Expert Panel" i],
+img[src*="consult-expert-all-page.png"] {
+    width: 144px !important;
+    max-width: 144px !important;
+    height: 60px !important;
+    max-height: 60px !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+aside div:has(> img[src*="consult-expert-all-page.png"]),
+aside div:has(> img[alt*="TCS Expert Panel" i]) {
+    padding: 2px 4px !important;
+    border-radius: 9999px !important;
+    background: #f8fafc !important;
+    border: 1px solid #f1f5f9 !important;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04) !important;
+}
+
+/* Breadcrumbs */
+nav a[class*="hover:text-emerald-600"]:hover,
+nav a[class*="hover:text-[#2EA8F2]"]:hover {
+    color: var(--tcs-accent, #2EA8F2) !important;
+}
+
+nav span[class*="text-emerald-600"],
+nav span[class*="text-[#0B3D91]"] {
+    color: var(--tcs-primary, #0B3D91) !important;
+}
+
+/* Decorative section heading underline bars (Selective approved CTA/accent gradient) */
+div[class*="bg-gradient-to-r"][class*="to-[#FF4ED0]"],
+div[class*="bg-gradient-to-r"][class*="to-[#2EA8F2]"] {
+    background: var(--tcs-cta-gradient) !important;
+}
+
+/* FAQ accent bar & active states */
+.tcs-faq-accent-bar {
+    background: var(--tcs-primary, #0B3D91) !important;
+}
+
+.tcs-faq-card:hover {
+    border-color: var(--tcs-accent, #2EA8F2) !important;
+    box-shadow: 0 0 0 3px rgba(46, 168, 242, 0.10) !important;
+}
+
+.tcs-faq-card.is-open {
+    border-color: var(--tcs-primary, #0B3D91) !important;
+    box-shadow: 0 0 0 3px rgba(11, 61, 145, 0.08) !important;
+}
+
+.tcs-faq-card:hover .tcs-faq-card-q,
+.tcs-faq-card.is-open .tcs-faq-card-q {
+    color: var(--tcs-primary, #0B3D91) !important;
+}
+
+.tcs-faq-card.is-open .tcs-faq-chevron,
+.tcs-faq-card.is-open .tcs-faq-chevron svg {
+    color: var(--tcs-primary, #0B3D91) !important;
+}
+
+.tcs-faq-toggle-btn:hover {
+    border-color: var(--tcs-primary, #0B3D91) !important;
+    color: var(--tcs-primary, #0B3D91) !important;
+}
+
+/* Related Services pills hover state */
+#related-services-section a:hover,
+.ifcRelatedServices a:hover {
+    border-color: var(--tcs-accent, #2EA8F2) !important;
+    background-color: var(--tcs-surface-hover, #F0F8FF) !important;
+    color: var(--tcs-primary, #0B3D91) !important;
+}
+
+/* Pricing Section Buttons & Badges */
+.common-btn.text-emerald-700,
+button[class*="text-emerald-700"],
+button[class*="text-[#0B3D91]"] {
+    background-color: var(--tcs-accent-light, #F0F8FF) !important;
+    border-color: var(--tcs-accent-border, #BAE6FD) !important;
+    color: var(--tcs-primary, #0B3D91) !important;
+}
+
+.common-btn.text-emerald-700:hover,
+button[class*="text-emerald-700"]:hover,
+button[class*="text-[#0B3D91]"]:hover {
+    background-color: var(--tcs-primary, #0B3D91) !important;
+    border-color: var(--tcs-primary, #0B3D91) !important;
+    color: #ffffff !important;
+}
+
+button.bg-emerald-500,
+button.bg-\[\#0B3D91\] {
+    background-color: var(--tcs-primary, #0B3D91) !important;
+}
+
+/* Form focus states */
+.phone-field-container:focus-within {
+    border-color: var(--tcs-primary, #0B3D91) !important;
+    box-shadow: 0 0 0 4px rgba(11, 61, 145, 0.10) !important;
+}
+
+/* Footer Link Hover & Underline */
+footer a:hover span.group-hover\:text-blue-600 {
+    color: var(--tcs-accent, #2EA8F2) !important;
+}
+
+footer a:hover span.group-hover\:w-full {
+    background-color: var(--tcs-accent, #2EA8F2) !important;
+}
+
+/* ==========================================================================
+   Global Responsive Hardening & Viewport Containment
+   ========================================================================== */
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    overflow-x: clip !important;
+    overflow-y: visible !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    position: relative !important;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img,
+video,
+canvas,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Text wrapping & long strings prevention */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+span,
+a,
+dt,
+dd {
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+}
+
+/* Prevent Grid and Flex items from expanding beyond parent width due to min-width: auto */
+.grid,
+.flex,
+.grid>*,
+.flex>*,
+main,
+article,
+section,
+.read-more-content,
+.page-content-styled,
+.page-content,
+.space-y-4,
+.space-y-6,
+div[class*="space-y"] {
+    min-width: 0 !important;
+    max-width: 100% !important;
+}
+
+/* ==========================================================================
+   Table Responsiveness & Horizontal Scroll Containment
+   ========================================================================== */
+
+.table-responsive,
+.read-more-content .page-content .table-responsive,
+div[class*="table-responsive"] {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior-x: contain !important;
+    touch-action: pan-x pan-y !important;
+    margin: 1.25rem 0 1.5rem !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 0.5rem !important;
+    background: #ffffff !important;
+    position: relative !important;
+}
+
+.table-responsive table,
+.read-more-content .page-content table {
+    width: 100% !important;
+    min-width: 520px !important;
+    max-width: none !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    margin-bottom: 0 !important;
+    background: #ffffff !important;
+}
+
+@media (max-width: 639.98px) {
+
+    .table-responsive table,
+    .read-more-content .page-content table {
+        min-width: 440px !important;
+        font-size: 0.75rem !important;
+    }
+
+    .table-responsive th,
+    .table-responsive td,
+    .read-more-content .page-content th,
+    .read-more-content .page-content td {
+        padding: 0.5rem 0.625rem !important;
+        font-size: 0.75rem !important;
+        line-height: 1.4 !important;
+    }
+
+    .table-responsive th:first-child,
+    .table-responsive td:first-child,
+    .read-more-content .page-content th:first-child,
+    .read-more-content .page-content td:first-child {
+        width: 35% !important;
+        min-width: 6.5rem !important;
+    }
+}
+
+/* ==========================================================================
+   Sidebar Mobile & Tablet Stacking (Non-Sticky on < 1024px)
+   ========================================================================== */
+
+@media (max-width: 1023.98px) {
+
+    aside,
+    aside.lg\:sticky,
+    aside[class*="lg:sticky"] {
+        position: static !important;
+        top: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-top: 1.5rem !important;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    aside,
+    aside.lg\:sticky,
+    aside[class*="lg:sticky"] {
+        position: -webkit-sticky !important;
+        position: sticky !important;
+        top: 90px !important;
+    }
+}
+
+/* ==========================================================================
+   Header & Mobile Navigation Controls
+   ========================================================================== */
+
+/* Responsive Header and Logo sizing */
+header.ifLayoutHeader img,
+.ifLayoutHeader img[src*="logo"],
+header img[alt*="IndiaFilings"],
+header img[alt*="TCS"] {
+    max-height: 40px !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+@media (min-width: 640px) {
+
+    header.ifLayoutHeader img,
+    .ifLayoutHeader img[src*="logo"],
+    header img[alt*="IndiaFilings"],
+    header img[alt*="TCS"] {
+        max-height: 48px !important;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    header.ifLayoutHeader img,
+    .ifLayoutHeader img[src*="logo"],
+    header img[alt*="IndiaFilings"],
+    header img[alt*="TCS"] {
+        max-height: 56px !important;
+    }
+}
+
+/* Touch targets for mobile header buttons */
+button[aria-label="Open menu"],
+button[aria-label="Close menu"],
+button[aria-label="Search Products"] {
+    min-width: 44px !important;
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    touch-action: manipulation !important;
+}
+
+/* ==========================================================================
+   Breadcrumb Reflow & Clean Mobile Wrapping
+   ========================================================================== */
+
+nav[aria-label="Breadcrumb"],
+nav[aria-label="Breadcrumbs"],
+main nav.flex,
+main nav {
+    flex-wrap: wrap !important;
+    gap: 0.25rem 0.4rem !important;
+    line-height: 1.4 !important;
+}
+
+/* ==========================================================================
+   FAQ Accordion & Related Services Touch Scaling
+   ========================================================================== */
+
+.tcs-faq-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+}
+
+@media (min-width: 768px) {
+    .tcs-faq-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 14px !important;
+    }
+}
+
+.tcs-faq-card-btn {
+    min-height: 48px !important;
+    padding: 12px 14px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+    width: 100% !important;
+    cursor: pointer !important;
+    touch-action: manipulation !important;
+}
+
+@media (min-width: 640px) {
+    .tcs-faq-card-btn {
+        padding: 14px 18px !important;
+    }
+}
+
+.tcs-faq-chevron {
+    flex-shrink: 0 !important;
+    transition: transform 0.2s ease-in-out !important;
+}
+
+.tcs-faq-card.is-open .tcs-faq-chevron {
+    transform: rotate(180deg) !important;
+}
+
+.tcs-faq-content {
+    padding: 0 14px 14px 14px !important;
+}
+
+@media (min-width: 640px) {
+    .tcs-faq-content {
+        padding: 0 18px 18px 18px !important;
+    }
+}
+
+#related-services-section .flex-wrap {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+}
+
+@media (min-width: 640px) {
+    #related-services-section .flex-wrap {
+        gap: 10px !important;
+    }
+}
+
+#related-services-section a {
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 38px !important;
+    padding: 6px 12px !important;
+    font-size: clamp(11.5px, 2.2vw, 13px) !important;
+    line-height: 1.35 !important;
+    border-radius: 6px !important;
+    white-space: normal !important;
+    text-align: left !important;
+}
+
+/* ==========================================================================
+   Form Input Fields & Touch Sizing (iOS Safari Zoom Prevention)
+   ========================================================================== */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+    font-size: 16px !important;
+    min-height: 44px !important;
+    border-radius: 8px !important;
+    max-width: 100% !important;
+}
+
+/* ==========================================================================
+   Tirumala Mobile Menu Drawer Architecture
+   ========================================================================== */
+
+#tcs-mobile-menu {
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 9999 !important;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: visibility 0.25s ease, opacity 0.25s ease;
+}
+
+#tcs-mobile-menu.is-open {
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+.tcs-mobile-backdrop {
+    position: absolute !important;
+    inset: 0 !important;
+    background: rgba(15, 23, 42, 0.6) !important;
+    backdrop-filter: blur(4px) !important;
+    -webkit-backdrop-filter: blur(4px) !important;
+    transition: opacity 0.25s ease !important;
+}
+
+.tcs-mobile-drawer {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: 380px !important;
+    background: #ffffff !important;
+    box-shadow: -10px 0 35px rgba(15, 23, 42, 0.15) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    transform: translateX(100%) !important;
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    z-index: 10 !important;
+    overflow: hidden !important;
+}
+
+#tcs-mobile-menu.is-open .tcs-mobile-drawer {
+    transform: translateX(0) !important;
+}
+
+.tcs-mobile-drawer-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 14px 18px !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    background: #ffffff !important;
+    flex-shrink: 0 !important;
+}
+
+.tcs-mobile-drawer-header img {
+    max-height: 36px !important;
+    width: auto !important;
+}
+
+.tcs-mobile-close-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 10px !important;
+    border: 1px solid #e2e8f0 !important;
+    background: #f8fafc !important;
+    color: #475569 !important;
+    cursor: pointer !important;
+    transition: all 0.18s ease !important;
+}
+
+.tcs-mobile-close-btn:hover {
+    background: #f1f5f9 !important;
+    color: #0f172a !important;
+}
+
+.tcs-mobile-drawer-body {
+    flex: 1 1 auto !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding: 12px 16px !important;
+}
+
+.tcs-mobile-accordion-item {
+    border-bottom: 1px solid #f1f5f9 !important;
+    margin-bottom: 2px !important;
+}
+
+.tcs-mobile-accordion-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    padding: 13px 8px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #0f172a !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    text-align: left !important;
+    touch-action: manipulation !important;
+    min-height: 44px !important;
+}
+
+.tcs-mobile-accordion-btn:hover {
+    color: var(--tcs-primary, #0B3D91) !important;
+}
+
+.tcs-mobile-accordion-chevron {
+    width: 18px !important;
+    height: 18px !important;
+    color: #64748b !important;
+    transition: transform 0.2s ease-in-out !important;
+    flex-shrink: 0 !important;
+}
+
+.tcs-mobile-accordion-item.is-expanded .tcs-mobile-accordion-chevron {
+    transform: rotate(180deg) !important;
+    color: var(--tcs-primary, #0B3D91) !important;
+}
+
+.tcs-mobile-accordion-panel {
+    display: none;
+    padding: 4px 4px 12px 8px !important;
+}
+
+.tcs-mobile-accordion-item.is-expanded .tcs-mobile-accordion-panel {
+    display: block !important;
+}
+
+.tcs-mobile-sublink {
+    display: flex !important;
+    align-items: center !important;
+    padding: 8px 10px !important;
+    font-size: 13.5px !important;
+    color: #334155 !important;
+    border-radius: 6px !important;
+    transition: background-color 0.15s ease, color 0.15s ease !important;
+    text-decoration: none !important;
+    min-height: 38px !important;
+}
+
+.tcs-mobile-sublink:hover,
+.tcs-mobile-sublink:active {
+    background-color: var(--tcs-accent-light, #F0F8FF) !important;
+    color: var(--tcs-primary, #0B3D91) !important;
+    text-decoration: none !important;
+}
+
+.tcs-mobile-drawer-footer {
+    padding: 16px 20px !important;
+    border-top: 1px solid #e2e8f0 !important;
+    background: #f8fafc !important;
+    flex-shrink: 0 !important;
+}
+
+.tcs-mobile-cta-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    padding: 12px 16px !important;
+    border-radius: 10px !important;
+    background: var(--tcs-cta-gradient) !important;
+    color: #ffffff !important;
+    font-size: 14.5px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 12px rgba(11, 61, 145, 0.2) !important;
+    min-height: 46px !important;
+    cursor: pointer !important;
+}
+
+.tcs-mobile-cta-btn:hover {
+    background: var(--tcs-cta-gradient-hover) !important;
+    color: #ffffff !important;
+}
+
+/* ==========================================================================
+   Homepage Hero & Our Clients Section Spacing Normalization
+   ========================================================================== */
+
+.index-module__vbPTMW__hero {
+    padding-bottom: 0 !important;
+}
+
+.index-module__vbPTMW__hero:after {
+    height: 100px !important;
+}
+
+.index-module__vbPTMW__heroCopy {
+    padding-bottom: clamp(24px, 3.5vw, 40px) !important;
+}
+
+.index-module__vbPTMW__logoSection {
+    padding-top: clamp(28px, 4vw, 44px) !important;
+    padding-bottom: clamp(44px, 6vw, 68px) !important;
+}
+
+.index-module__vbPTMW__logoHeading {
+    margin-bottom: clamp(24px, 3.5vw, 36px) !important;
+}
+
+/* ==========================================================================
+   Continuous Infinite Marquee for "Our Clients" Section
+   ========================================================================== */
+
+.index-module__vbPTMW__logoSection {
+    overflow: hidden !important;
+}
+
+.index-module__vbPTMW__logoCarouselWrap {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 1180px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+    overflow: hidden !important;
+    position: relative !important;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 48px, black calc(100% - 48px), transparent 100%) !important;
+    mask-image: linear-gradient(to right, transparent 0%, black 48px, black calc(100% - 48px), transparent 100%) !important;
+}
+
+.tcs-clients-marquee-track {
+    display: flex !important;
+    flex: none !important;
+    width: max-content !important;
+    overflow: visible !important;
+    padding: 12px 0 !important;
+    will-change: transform !important;
+    backface-visibility: hidden !important;
+    -webkit-backface-visibility: hidden !important;
+    transform: translate3d(0, 0, 0);
+    animation: tcsMarqueeScroll 35s linear infinite !important;
+}
+
+@keyframes tcsMarqueeScroll {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+.tcs-clients-marquee-group {
+    display: flex !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+    gap: 48px !important;
+    padding-right: 48px !important;
+}
+
+/* Pause on hover on desktop */
+@media (hover: hover) and (pointer: fine) {
+    .index-module__vbPTMW__logoCarouselWrap:hover .tcs-clients-marquee-track {
+        animation-play-state: paused !important;
+    }
+}
+
+/* Mobile & Tablet adjustments */
+@media (max-width: 640px) {
+    .index-module__vbPTMW__logoCarouselWrap {
+        padding: 0 12px !important;
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 24px, black calc(100% - 24px), transparent 100%) !important;
+        mask-image: linear-gradient(to right, transparent 0%, black 24px, black calc(100% - 24px), transparent 100%) !important;
+    }
+
+    .tcs-clients-marquee-track {
+        animation-duration: 28s !important;
+    }
+
+    .tcs-clients-marquee-group {
+        gap: 32px !important;
+        padding-right: 32px !important;
+    }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .tcs-clients-marquee-track {
+        animation-duration: 70s !important;
+    }
+}
+
+/* ==========================================================================
+   Professional Expertise Right-Side Visual
+   ========================================================================== */
+
+.index-module__vbPTMW__platformVisual {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    position: relative !important;
+}
+
+.tcs-platform-image {
+    width: 100% !important;
+    max-width: 520px !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
+    background: transparent !important;
+    filter: drop-shadow(0 14px 34px rgba(15, 23, 42, 0.08)) !important;
+    transition: transform 0.3s ease !important;
+}
+
+.tcs-platform-image:hover {
+    transform: translateY(-2px) !important;
+}
+
+/* Desktop: Move entire right-side image/composition upward by ~25px */
+@media (min-width: 1061px) {
+    .index-module__vbPTMW__platformVisual {
+        margin-top: -25px !important;
+    }
+}
+
+/* Tablet (641px - 1060px): Maintain 2-column left/right layout */
+@media (min-width: 641px) and (max-width: 1060px) {
+    .index-module__vbPTMW__platformLayout {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        align-items: center !important;
+        gap: clamp(24px, 3.5vw, 40px) !important;
+    }
+
+    .index-module__vbPTMW__platformCard {
+        max-width: 100% !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+
+    .index-module__vbPTMW__platformVisual {
+        margin-top: -20px !important;
+    }
+
+    .tcs-platform-image {
+        max-width: 100% !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 auto !important;
+    }
+}
+
+/* Mobile (<= 640px): Visual and next section positioning */
+@media (max-width: 640px) {
+    .index-module__vbPTMW__platformLayout {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+    }
+
+    .index-module__vbPTMW__platformVisual {
+        margin-top: -30px !important;
+    }
+
+    .tcs-platform-image {
+        max-width: 330px !important;
+        margin: 0 auto !important;
+    }
+
+    .index-module__vbPTMW__servicesSection {
+        margin-top: -30px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .tcs-platform-image {
+        max-width: 290px !important;
+    }
+}
+
+/* ==========================================================================
+   TCS Dedicated Contact Us Page Styles
+   ========================================================================== */
+
+.tcs-contact-page {
+    background-color: #FAFBFC;
+    color: #1E293B;
+    font-family: var(--tcs-font-family, 'Inter', system-ui, sans-serif);
+}
+
+/* ==========================================================================
+   TIRUMALA CONSULTANCY SERVICES — CONTACT PAGE (OUTCROWD-INSPIRED REDESIGN)
+   ========================================================================== */
+
+.tcs-contact-page {
+    background-color: #FFFFFF;
+    color: #0F172A;
+}
+
+.tcs-contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(16px, 4vw, 36px);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Eyebrows & Headings */
+.tcs-contact-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #0B3D91;
+    margin-bottom: 10px;
+    padding: 4px 12px;
+    background: #EFF6FF;
+    border: 1px solid rgba(46, 168, 242, 0.2);
+    border-radius: 9999px;
+}
+
+/* 1. GET STARTED / ENQUIRY SECTION */
+.tcs-enquiry-section {
+    padding: clamp(52px, 6.5vw, 84px) 0;
+    background: #FFFFFF;
+}
+
+.tcs-hero-content {
+    max-width: 780px;
+    margin: 0 auto clamp(34px, 4.2vw, 48px) auto;
+    text-align: center;
+}
+
+.tcs-contact-hero-heading {
+    font-size: clamp(34px, 4.4vw, 52px);
+    font-weight: 700;
+    line-height: 1.16;
+    letter-spacing: -0.028em;
+    color: #0F172A;
+    margin: 12px 0 16px 0;
+}
+
+.tcs-contact-hero-sub {
+    font-size: clamp(15px, 1.35vw, 17px);
+    line-height: 1.62;
+    color: #64748B;
+    margin: 0 auto;
+    max-width: 580px;
+}
+
+.tcs-inline-link {
+    color: #0B3D91;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    transition: color 0.25s ease;
+}
+
+.tcs-inline-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 1.5px;
+    background: #2EA8F2;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    pointer-events: none;
+    transition: transform 0.35s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.tcs-inline-link:hover {
+    color: #2EA8F2;
+}
+
+.tcs-inline-link:hover::after {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+}
+
+.tcs-form-wrapper {
+    max-width: 780px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 24px;
+    padding: clamp(26px, 4.5vw, 44px);
+    box-shadow: 0 4px 28px -4px rgba(15, 23, 42, 0.06);
+    transition: box-shadow 0.3s ease;
+}
+
+.tcs-form-wrapper:hover {
+    box-shadow: 0 8px 36px -4px rgba(15, 23, 42, 0.08);
+}
+
+.tcs-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.tcs-field-group {
+    margin-bottom: 22px;
+    position: relative;
+}
+
+.tcs-field-label {
+    display: block;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #1E293B;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+.tcs-field-label .req {
+    color: #EF4444;
+}
+
+.tcs-field-input {
+    width: 100%;
+    padding: 13px 18px;
+    font-size: 14.5px;
+    font-family: inherit;
+    color: #0F172A;
+    background-color: #F8FAFC;
+    border: 1px solid #CBD5E1;
+    border-radius: 14px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Outcrowd placeholder focus transition */
+.tcs-field-input::-webkit-input-placeholder,
+.tcs-field-input::-moz-placeholder {
+    color: #94A3B8;
+    transition: opacity 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.25s ease;
+}
+
+.tcs-field-input:focus::-webkit-input-placeholder,
+.tcs-field-input:focus::-moz-placeholder {
+    opacity: 0;
+    transform: translateX(4px);
+}
+
+.tcs-field-input:focus {
+    background-color: #FFFFFF;
+    border-color: #2EA8F2;
+    box-shadow: 0 0 0 3.5px rgba(46, 168, 242, 0.16);
+    caret-color: #0B3D91;
+}
+
+/* Autofill styling */
+.tcs-field-input:-webkit-autofill,
+.tcs-field-input:-webkit-autofill:hover,
+.tcs-field-input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #0F172A !important;
+    -webkit-box-shadow: 0 0 0px 1000px #F8FAFC inset !important;
+    background-color: #F8FAFC !important;
+}
+
+.tcs-field-input:focus:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset !important;
+}
+
+.tcs-field-input.has-error {
+    border-color: #EF4444 !important;
+    background-color: #FEF2F2 !important;
+    box-shadow: 0 0 0 3.5px rgba(239, 68, 68, 0.14) !important;
+}
+
+.tcs-field-error {
+    display: none;
+    font-size: 12px;
+    color: #EF4444;
+    font-weight: 500;
+    margin-top: 6px;
+    line-height: 1.35;
+    animation: tcsErrorSlide 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes tcsErrorSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tcs-select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.tcs-field-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 16px;
+    padding-right: 44px;
+    cursor: pointer;
+}
+
+.tcs-field-textarea {
+    min-height: 120px;
+    resize: vertical;
+    line-height: 1.55;
+}
+
+.tcs-form-actions {
+    margin-top: 8px;
+}
+
+/* Outcrowd Explode / Cursor-following Ripple Effect */
+.tcs-has-explode {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.tcs-has-explode .tcs-btn-text,
+.tcs-has-explode .tcs-btn-arrow,
+.tcs-has-explode svg {
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease, transform 0.25s ease;
+}
+
+.tcs-explode {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #38BDF8 0%, #0B3D91 100%);
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.01);
+    opacity: 0;
+    z-index: 1;
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.35s ease;
+}
+
+.tcs-has-explode.is-exploding .tcs-explode {
+    opacity: 0.95;
+    transform: translate(-50%, -50%) scale(38);
+}
+
+.tcs-primary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14.5px 28px;
+    font-size: 15.5px;
+    font-weight: 600;
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #0B3D91 0%, #1E40AF 50%, #2EA8F2 100%);
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 18px rgba(11, 61, 145, 0.24);
+    transition: transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.22s ease, opacity 0.2s ease;
+}
+
+.tcs-primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(11, 61, 145, 0.32);
+}
+
+.tcs-primary-btn:active {
+    transform: translateY(0);
+}
+
+.tcs-primary-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.tcs-primary-btn:hover .tcs-btn-arrow {
+    transform: translateX(4px);
+}
+
+.tcs-btn-arrow {
+    transition: transform 0.25s ease;
+}
+
+/* Magnetic Elements */
+.tcs-magnetic {
+    transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+}
+
+.tcs-form-success {
+    display: none;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 20px;
+    background: #F0FDF4;
+    border: 1px solid #BBF7D0;
+    border-radius: 12px;
+    color: #166534;
+    margin-top: 20px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.tcs-success-icon {
+    flex-shrink: 0;
+    color: #16A34A;
+}
+
+.tcs-success-title {
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+
+.tcs-success-desc {
+    font-size: 13.5px;
+    color: #15803D;
+    line-height: 1.45;
+}
+
+/* 2. TALK TO OUR EXPERTS SECTION */
+.tcs-experts-section {
+    padding: clamp(52px, 6.5vw, 80px) 0;
+    background: #F8FAFC;
+    border-top: 1px solid #E2E8F0;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.tcs-section-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto clamp(32px, 4vw, 44px) auto;
+}
+
+.tcs-section-heading {
+    font-size: clamp(26px, 3.2vw, 36px);
+    font-weight: 600;
+    color: #0F172A;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    margin: 8px 0 12px 0;
+}
+
+.tcs-section-sub {
+    font-size: clamp(14px, 1.3vw, 16px);
+    color: #64748B;
+    line-height: 1.6;
+    margin: 0 auto;
+}
+
+.tcs-experts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(18px, 2.5vw, 28px);
+}
+
+.tcs-expert-item {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 18px;
+    padding: clamp(22px, 3vw, 30px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
+}
+
+.tcs-expert-item:hover {
+    transform: translateY(-3px);
+    border-color: #2EA8F2;
+    box-shadow: 0 12px 30px -4px rgba(11, 61, 145, 0.1);
+}
+
+.tcs-expert-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    background: #EFF6FF;
+    color: #0B3D91;
+}
+
+.tcs-expert-icon.whatsapp {
+    background: #F0FDF4;
+    color: #16A34A;
+}
+
+.tcs-expert-icon.email {
+    background: #F8FAFC;
+    color: #2EA8F2;
+}
+
+.tcs-expert-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 6px;
+}
+
+.tcs-expert-val {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0B3D91;
+    margin-bottom: 6px;
+    word-break: break-all;
+}
+
+.tcs-expert-icon.whatsapp + * + .tcs-expert-val {
+    color: #16A34A;
+}
+
+.tcs-expert-desc {
+    font-size: 13px;
+    color: #64748B;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+.tcs-expert-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0B3D91;
+    text-decoration: none;
+    transition: gap 0.2s ease, color 0.2s ease;
+    margin-top: 12px;
+}
+
+.tcs-expert-action svg {
+    transition: transform 0.2s ease;
+}
+
+.tcs-expert-item:hover .tcs-expert-action {
+    color: #2EA8F2;
+    gap: 9px;
+}
+
+.tcs-expert-item:hover .tcs-expert-action svg {
+    transform: translateX(3px);
+}
+
+/* 3. VISIT OUR OFFICE SECTION */
+.tcs-office-section {
+    padding: clamp(52px, 6.5vw, 80px) 0;
+    background: #FFFFFF;
+}
+
+.tcs-office-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: clamp(28px, 4vw, 52px);
+    align-items: center;
+}
+
+.tcs-office-sub {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #64748B;
+    margin-bottom: 20px;
+}
+
+.tcs-office-info-card {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 18px;
+    padding: clamp(20px, 3vw, 28px);
+}
+
+.tcs-office-company {
+    font-size: 17px;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 8px;
+}
+
+.tcs-office-street {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.tcs-office-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+    border-top: 1px solid #E2E8F0;
+    padding-top: 14px;
+}
+
+.tcs-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #64748B;
+}
+
+.tcs-meta-row svg {
+    flex-shrink: 0;
+    color: #0B3D91;
+}
+
+.tcs-directions-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0B3D91;
+    background: #EFF6FF;
+    border: 1px solid #BFDBFE;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.tcs-directions-action:hover {
+    background: #0B3D91;
+    color: #FFFFFF;
+    border-color: #0B3D91;
+}
+
+.tcs-directions-action svg {
+    transition: transform 0.2s ease;
+}
+
+.tcs-directions-action:hover svg {
+    transform: translateX(3px);
+}
+
+.tcs-office-right {
+    width: 100%;
+}
+
+.tcs-map-frame {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 6px 28px -4px rgba(15, 23, 42, 0.08);
+    background: #E2E8F0;
+    aspect-ratio: 4 / 3;
+    min-height: 320px;
+}
+
+.tcs-map-iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+.tcs-map-badge {
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(15, 23, 42, 0.1);
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #0F172A;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .tcs-experts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tcs-office-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .tcs-map-frame {
+        min-height: 280px;
+    }
+}
+
+@media (max-width: 640px) {
+    .tcs-form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .tcs-form-wrapper {
+        border-radius: 16px;
+        padding: 20px 16px;
+    }
+
+    .tcs-contact-hero-heading {
+        font-size: 29px;
+    }
+
+    .tcs-section-heading {
+        font-size: 24px;
+    }
+}
+
+/* Outcrowd Scroll-based Header Behavior */
+.ifLayoutHeader {
+    transition: background-color 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s ease !important;
+}
+
+.ifLayoutHeader.is-scrolled {
+    background: rgba(255, 255, 255, 0.94) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border-bottom: 1px solid rgba(203, 213, 225, 0.6) !important;
+    box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.08) !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* ==========================================================================
+   TCS Mobile-Only Sticky Bottom CTA Bar (Across all 116 Service Pages)
+   ========================================================================== */
+.tcs-mobile-sticky-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 88px !important;
+  }
+
+  .tcs-mobile-sticky-bar {
+    display: block !important;
+    position: fixed !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) translateZ(0) !important;
+    -webkit-transform: translateX(-50%) translateZ(0) !important;
+    width: calc(100% - 24px) !important;
+    max-width: 440px !important;
+    bottom: 12px !important;
+    bottom: max(12px, env(safe-area-inset-bottom, 12px)) !important;
+    z-index: 105 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    pointer-events: auto !important;
+  }
+
+  .tcs-sticky-bar-inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    background: #14121B !important;
+    background: linear-gradient(180deg, #1C1924 0%, #121019 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 9999px !important;
+    padding: 7px 8px 7px 22px !important;
+    box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.65), 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    min-height: 56px !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    gap: 12px !important;
+  }
+
+  .tcs-sticky-bar-pricing {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+  }
+
+  .tcs-sticky-bar-label {
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    color: #94A3B8 !important;
+    line-height: 1.15 !important;
+    white-space: nowrap !important;
+  }
+
+  .tcs-sticky-bar-price {
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    color: #FFFFFF !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.01em !important;
+    white-space: nowrap !important;
+    font-family: inherit !important;
+  }
+
+  .tcs-sticky-bar-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    background: transparent !important;
+    color: #FFFFFF !important;
+    padding: 4px 0 4px 6px !important;
+    border-radius: 9999px !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    transition: opacity 0.15s ease, transform 0.15s ease !important;
+  }
+
+  .tcs-sticky-bar-btn:hover,
+  .tcs-sticky-bar-btn:active {
+    opacity: 0.9 !important;
+    transform: scale(0.98) !important;
+  }
+
+  .tcs-sticky-bar-btn-text {
+    font-size: 13px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.04em !important;
+    color: #FFFFFF !important;
+    text-transform: uppercase !important;
+  }
+
+  .tcs-sticky-bar-icon {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    background: linear-gradient(135deg, #6366F1 0%, #A855F7 50%, #C084FC 100%) !important;
+    box-shadow: 0 2px 10px rgba(168, 85, 247, 0.4) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    color: #FFFFFF !important;
+  }
+
+  .tcs-sticky-bar-icon svg {
+    display: block !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .tcs-mobile-sticky-bar {
+    width: calc(100% - 16px) !important;
+  }
+
+  .tcs-sticky-bar-inner {
+    padding: 6px 6px 6px 14px !important;
+    min-height: 50px !important;
+    gap: 8px !important;
+  }
+
+  .tcs-sticky-bar-label {
+    font-size: 9px !important;
+  }
+
+  .tcs-sticky-bar-price {
+    font-size: 17px !important;
+  }
+
+  .tcs-sticky-bar-btn {
+    gap: 6px !important;
+  }
+
+  .tcs-sticky-bar-btn-text {
+    font-size: 11px !important;
+  }
+
+  .tcs-sticky-bar-icon {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .tcs-mobile-sticky-bar {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   Footer 4-Column Layout & Responsive Spacing
+   ========================================================================== */
+.ifLayoutFooter .ifFooterGrid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 2rem !important;
+}
+
+@media (min-width: 640px) {
+  .ifLayoutFooter .ifFooterGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 2.5rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ifLayoutFooter .ifFooterGrid {
+    grid-template-columns: 1.35fr 1fr 1fr 1fr !important;
+    gap: 2.5rem !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .ifLayoutFooter .ifFooterGrid {
+    grid-template-columns: 1.4fr 1fr 1fr 1fr !important;
+    gap: 3.5rem !important;
+  }
+}
+
+.ifLayoutFooter .ifFooterBrand {
+  max-width: 340px !important;
+}
+
+.ifLayoutFooter .ifFooterBrand p {
+  color: #475569 !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  margin-top: 14px !important;
+}
+
+.ifLayoutFooter .ifFooterSectionTitle {
+  color: #0F172A !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em !important;
+  margin-bottom: 14px !important;
+}
+
+.ifLayoutFooter ul li span,
+.ifLayoutFooter ul li a {
+  font-size: 14.5px !important;
+  line-height: 1.5 !important;
+  color: #64748B !important;
+}
+
+.ifLayoutFooter ul li a:hover {
+  color: #0B3D91 !important;
+}
+
+/* ==========================================================================
+   TCS Minimal Hero Master Template (Approved Standard)
+   ========================================================================== */
+.tcs-minimal-hero {
+  background-color: #ffffff !important;
+  padding-top: 48px !important;
+  padding-bottom: 56px !important;
+}
+
+.tcs-minimal-hero-title,
+.tcs-minimal-hero h1 {
+  color: #000000 !important;
+  font-size: 38px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.02em !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+.tcs-minimal-hero-desc,
+.tcs-minimal-hero p {
+  color: #475569 !important;
+  font-size: 16px !important;
+  line-height: 1.65 !important;
+  max-width: 680px !important;
+  margin: 18px auto 0 auto !important;
+  text-align: center !important;
+}
+
+@media (max-width: 768px) {
+  .tcs-minimal-hero {
+    padding-top: 36px !important;
+    padding-bottom: 44px !important;
+  }
+  .tcs-minimal-hero-title,
+  .tcs-minimal-hero h1 {
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+  }
+  .tcs-minimal-hero-desc,
+  .tcs-minimal-hero p {
+    font-size: 14.5px !important;
+    margin-top: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .tcs-minimal-hero {
+    padding-top: 28px !important;
+    padding-bottom: 36px !important;
+  }
+  .tcs-minimal-hero-title,
+  .tcs-minimal-hero h1 {
+    font-size: 23px !important;
+    line-height: 1.32 !important;
+  }
+  .tcs-minimal-hero-desc,
+  .tcs-minimal-hero p {
+    font-size: 13.5px !important;
+    margin-top: 12px !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+}
+
+
+

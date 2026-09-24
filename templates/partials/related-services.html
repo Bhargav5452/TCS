@@ -1,0 +1,7 @@
+<section class="py-8" id="related-services"><div class="mx-auto" style="width: min(1480px, calc(100% - 120px)); max-width: none;"><div class="bg-white border border-border rounded-2xl mb-8"><div class="border-b border-border-subtle px-6 py-4"><h3 class="text-[15px] font-medium text-text">{{ page.related_heading | default('Related Services - Business Registration') }}</h3></div><div class="p-6 flex flex-wrap gap-2.5">
+        {% for service in page.related_services | default(site.related_services) %}
+            <a aria-current="{{ 'page' if service.id == page.id else 'false' }}" class="inline-flex items-center rounded-lg border {% if service.id == page.id %}border-green-200 bg-brand-light text-brand-hover pointer-events-none{% else %}border-border bg-background text-text-secondary hover:border-gray-300 hover:bg-surface-hover hover:text-text{% endif %} px-3 py-1.5 text-[13px] font-medium transition-colors" href="{{ service.url }}">
+                {{ service.name }}
+            </a>
+        {% endfor %}
+        </div></div></div></section>

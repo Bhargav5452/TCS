@@ -1,0 +1,188 @@
+import json
+import os
+
+BASE = 'd:/user/TCS_website'
+
+# ---- PUBLIC LIMITED COMPANY ----
+plc_data = {
+    "id": "public-limited-company",
+    "meta_title": "Public Limited Company Registration in India | TCS",
+    "meta_description": "Register your Public Limited Company in India with Tirumala Consultancy Services. Includes MCA name approval, MOA & AOA drafting, PAN & TAN registration, and statutory compliance support.",
+    "hero_title": "Public Limited Company Registration in India",
+    "hero_description": "Incorporate a Public Limited Company in India with complete legal support. Includes MCA name approval, MOA &amp; AOA drafting, PAN &amp; TAN registration, and statutory compliance support. Ideal for large businesses and fundraising.",
+    "price": "19,899",
+    "breadcrumbs": [
+        {"name": "Tirumala Consultancy Services", "url": "/"},
+        {"name": "Business Registration", "url": "/registrations"},
+        {"name": "Public Limited Company", "url": "/public-limited-company"}
+    ],
+    "main_content": """
+<div class="page-content">
+<h2>Public Limited Company Registration in India</h2>
+<p>A <strong>Public Limited Company</strong> is one of the most preferred business structures in India for large-scale operations, offering limited liability, easy share transferability, and access to public capital. Governed by the <strong>Companies Act, 2013</strong>, it provides unmatched credibility and growth opportunities for entrepreneurs and investors alike. Get your Company Registration done seamlessly with Tirumala Consultancy Services today.</p>
+
+<h3>Why Should You Choose Public Limited Company Registration in India?</h3>
+<p>Registering a <strong>Public Limited Company in India</strong> is the ideal choice for businesses looking to raise funds from the public, expand operations at scale, and establish a credible corporate identity. Unlike other business structures, a public limited company can issue shares to the general public through stock exchanges, making it significantly easier to attract large-scale investments and institutional funding.</p>
+
+<h4>Key Reasons to Register a Public Limited Company</h4>
+<ul>
+<li>Access to <strong>public capital</strong> through IPO and share issuance</li>
+<li><strong>Limited liability protection</strong> for all shareholders and directors</li>
+<li>Enhanced <strong>brand credibility</strong> and strong market reputation</li>
+<li>Perpetual succession – company continues despite changes in ownership</li>
+<li>Attractive to institutional investors and venture capitalists</li>
+<li>Eligible for listing on NSE and BSE stock exchanges</li>
+<li>Separate legal entity with the ability to own property and enter contracts</li>
+</ul>
+
+<h3>What is a Public Limited Company in India?</h3>
+<p>A <strong>Public Limited Company</strong> is a business entity incorporated under the Companies Act, 2013, that offers its shares to the general public and is listed or eligible to be listed on a recognised stock exchange. It has a separate legal identity from its shareholders and directors, offering limited liability protection to all its members.</p>
+<p>Tirumala Consultancy Services provides end-to-end assistance for public limited company incorporation, ensuring full compliance with the Ministry of Corporate Affairs (MCA) regulations across India.</p>
+
+<h4>Key Features of a Public Limited Company</h4>
+<ul>
+<li>Minimum 7 shareholders and 3 directors required</li>
+<li>No upper limit on the number of shareholders</li>
+<li>Shares are freely transferable among the public</li>
+<li>Must use the suffix "Limited" after its name</li>
+<li>Subject to stricter regulatory compliance and public disclosures</li>
+<li>Can raise funds through public issue of shares and debentures</li>
+</ul>
+
+<h3>Minimum Requirements for Public Limited Company Registration</h3>
+<table>
+<thead><tr><th>Requirement</th><th>Details</th></tr></thead>
+<tbody>
+<tr><td>Number of Directors</td><td>Minimum 3 Directors</td></tr>
+<tr><td>Number of Shareholders</td><td>Minimum 7 Shareholders</td></tr>
+<tr><td>Minimum Paid-up Capital</td><td>No minimum (as per Companies Amendment Act)</td></tr>
+<tr><td>Digital Signature Certificate (DSC)</td><td>Required for all directors</td></tr>
+<tr><td>Director Identification Number (DIN)</td><td>Required for all directors</td></tr>
+<tr><td>Registered Office</td><td>Must have a registered office address in India</td></tr>
+<tr><td>MOA &amp; AOA</td><td>Mandatory documents for incorporation</td></tr>
+</tbody>
+</table>
+
+<h3>Eligibility Criteria</h3>
+<h4>For Directors</h4>
+<ul>
+<li>Must be at least 18 years of age</li>
+<li>Must possess a valid Director Identification Number (DIN)</li>
+<li>Must have a valid Digital Signature Certificate (DSC)</li>
+<li>At least one director must be a resident of India</li>
+<li>Should not be disqualified under Section 164 of the Companies Act, 2013</li>
+</ul>
+<h4>For Shareholders</h4>
+<ul>
+<li>Minimum 7 shareholders required for incorporation</li>
+<li>Can be individuals, companies, or foreign nationals</li>
+<li>No restriction on the maximum number of shareholders</li>
+<li>Shares are freely transferable without restrictions</li>
+</ul>
+
+<h3>Documents Required for Public Limited Company Registration</h3>
+<h4>Documents for Directors &amp; Shareholders</h4>
+<ul>
+<li>PAN Card (mandatory for Indian nationals)</li>
+<li>Aadhaar Card / Passport / Voter ID (identity proof)</li>
+<li>Passport-size photographs</li>
+<li>Latest bank statement / utility bill (address proof)</li>
+<li>Email ID and mobile number</li>
+</ul>
+<h4>Documents for Registered Office</h4>
+<ul>
+<li>Electricity bill or water bill (not older than 2 months)</li>
+<li>Rent agreement (if rented premises)</li>
+<li>No Objection Certificate (NOC) from the property owner</li>
+<li>Sale deed (if owned property)</li>
+</ul>
+<h4>Key Incorporation Documents</h4>
+<ul>
+<li>Memorandum of Association (MOA) – defines company objectives and scope</li>
+<li>Articles of Association (AOA) – defines internal governance and rules</li>
+<li>DSC of all proposed directors</li>
+<li>DIN of all proposed directors</li>
+<li>Declaration by first directors in Form INC-9</li>
+</ul>
+
+<h3>Public Limited Company Registration Process in India</h3>
+<ol>
+<li><strong>Step 1 – Obtain DSC:</strong> All proposed directors must obtain a valid Digital Signature Certificate</li>
+<li><strong>Step 2 – Apply for DIN:</strong> Directors must apply for their Director Identification Number</li>
+<li><strong>Step 3 – Name Approval:</strong> Submit the proposed company name through RUN or SPICe+ Part A on MCA portal</li>
+<li><strong>Step 4 – Draft MOA &amp; AOA:</strong> Prepare and finalise the Memorandum and Articles of Association</li>
+<li><strong>Step 5 – File SPICe+ Form:</strong> Submit the SPICe+ Form with all required documents on the MCA portal</li>
+<li><strong>Step 6 – PAN &amp; TAN Application:</strong> PAN and TAN are auto-generated along with SPICe+ filing</li>
+<li><strong>Step 7 – Certificate of Incorporation:</strong> Upon MCA approval, the Certificate of Incorporation is issued</li>
+<li><strong>Step 8 – Open Bank Account:</strong> Open a current bank account in the company's name</li>
+<li><strong>Step 9 – GST Registration:</strong> Apply for GST registration if applicable</li>
+</ol>
+
+<h3>Estimated Timeline</h3>
+<table>
+<thead><tr><th>Stage</th><th>Time</th></tr></thead>
+<tbody>
+<tr><td>DSC Procurement</td><td>1 – 2 Working Days</td></tr>
+<tr><td>DIN Application</td><td>1 – 2 Working Days</td></tr>
+<tr><td>Name Approval</td><td>2 – 3 Working Days</td></tr>
+<tr><td>MOA &amp; AOA Drafting</td><td>1 – 2 Working Days</td></tr>
+<tr><td>SPICe+ Filing &amp; MCA Approval</td><td>5 – 7 Working Days</td></tr>
+<tr><td><strong>Total Estimated Time</strong></td><td><strong>10 – 15 Working Days</strong></td></tr>
+</tbody>
+</table>
+
+<h3>Post-Incorporation Compliances</h3>
+<ul>
+<li>Open a current bank account in the company's name</li>
+<li>Issue share certificates to all shareholders within 60 days</li>
+<li>File Form INC-20A (Declaration of Commencement of Business) within 180 days</li>
+<li>Appoint a statutory auditor within 30 days of incorporation</li>
+<li>Hold Annual General Meeting (AGM) within 6 months of the financial year end</li>
+<li>File annual returns (Form MGT-7) and financial statements (Form AOC-4)</li>
+<li>Conduct minimum 4 Board Meetings per year</li>
+</ul>
+
+<h3>Public Limited vs Private Limited vs LLP</h3>
+<table>
+<thead><tr><th>Parameter</th><th>Public Limited</th><th>Private Limited</th><th>LLP</th></tr></thead>
+<tbody>
+<tr><td>Min. Members</td><td>7 Shareholders, 3 Directors</td><td>2 Shareholders, 2 Directors</td><td>2 Partners</td></tr>
+<tr><td>Max. Members</td><td>Unlimited</td><td>200 Shareholders</td><td>Unlimited</td></tr>
+<tr><td>Public Fund Raising</td><td>Allowed</td><td>Not Allowed</td><td>Not Allowed</td></tr>
+<tr><td>Stock Exchange Listing</td><td>Eligible</td><td>Not Eligible</td><td>Not Eligible</td></tr>
+<tr><td>Compliance Level</td><td>High</td><td>Moderate</td><td>Low</td></tr>
+</tbody>
+</table>
+</div>
+""",
+    "faqs": [
+        {"question": "What is a Public Limited Company in India?", "answer": "<p>A Public Limited Company is a publicly traded entity that requires a minimum of seven members, with no limit on the maximum number of shareholders. It allows shares to be offered to the public and traded on stock exchanges.</p>"},
+        {"question": "What are the requirements to be a Director?", "answer": "<p>The Director needs to be over 18 years of age and must be a natural person. There are no limitations in terms of citizenship or residency. Therefore, even foreign nationals can be Directors in an Indian Public Limited Company.</p>"},
+        {"question": "What is the capital required to start a Public Limited Company?", "answer": "<p>You can start a Public Limited Company with any amount of capital. However, the fee must be paid to the Government for issuing a minimum of shares worth Rs.5 lakhs (Authorized Capital Fee) during the incorporation of the Company.</p>"},
+        {"question": "Is an office required for starting a Public Limited Company?", "answer": "<p>An address in India where the registered office of the Company will be situated is required. The premises can be commercial/industrial/residential where communication from the MCA will be received.</p>"},
+        {"question": "Do I have to be present in-person to incorporate a Public Limited Company?", "answer": "<p>No, you will not have to be present at our office or appear at any office for the incorporation. All the documents can be scanned and sent through email. Some documents will also have to be couriered to our office.</p>"},
+        {"question": "What are the documents required for incorporation?", "answer": "<p>Identity proof and address proof are mandatory for all the proposed Directors. PAN Card is mandatory for Indian Nationals. The landlord of the registered office premises must provide a No Objection Certificate (NOC) and submit identity/address proof.</p>"},
+        {"question": "How long will it take to incorporate a Public Limited Company?", "answer": "<p>Tirumala Consultancy Services can incorporate a Public Limited Company in 10–15 working days. The time taken depends on the submission of relevant documents and the speed of Government Approvals.</p>"},
+        {"question": "How long is the incorporation of the Company valid for?", "answer": "<p>Once a Company is incorporated, it will be active and in existence as long as the annual compliances are met with regularly. A struck-off Company can be revived for a period of up to 20 years.</p>"},
+        {"question": "Can NRIs/Foreign Nationals be a Director?", "answer": "<p>Yes, a NRI or Foreign National can be a Director in a Public Limited Company after obtaining a Director Identification Number. However, at least one Director on the Board must be a Resident Indian.</p>"},
+        {"question": "What is the difference between a Public and a Private Limited Company?", "answer": "<p>A Public Limited Company is listed on the recognised stock exchange and its securities are traded publicly. A Private Limited Company is not listed on the stock exchange and the securities are held by the members privately.</p>"},
+        {"question": "What are the annual compliance requirements?", "answer": "<p>A Public Limited Company must hold a Board Meeting at least once every 3 months, conduct an Annual General Meeting once every year, file annual returns (Form MGT-7), financial statements (Form AOC-4), and Income Tax Returns annually.</p>"},
+        {"question": "What are the advantages of a Public Limited Company?", "answer": "<p>Advantages include access to public capital through IPO, limited liability protection, perpetual succession, enhanced brand credibility, and eligibility for stock exchange listing. However, it comes with high compliance requirements and public disclosure obligations.</p>"}
+    ],
+    "related_services": [
+        {"title": "OPC Registration", "link": "/one-person-company"},
+        {"title": "Private Limited Company", "link": "/private-limited-company"},
+        {"title": "LLP Registration", "link": "/llp-registration"},
+        {"title": "Partnership Firm", "link": "/partnership-firm"},
+        {"title": "Section 8 Company", "link": "/section-8-company"},
+        {"title": "Proprietorship", "link": "/proprietorship"},
+        {"title": "Producer Company", "link": "/producer-company"},
+        {"title": "Virtual Office Address", "link": "/virtual-office"}
+    ]
+}
+
+os.makedirs(os.path.join(BASE, 'data'), exist_ok=True)
+with open(os.path.join(BASE, 'data', 'public-limited-company.json'), 'w', encoding='utf-8') as f:
+    json.dump(plc_data, f, indent=4, ensure_ascii=False)
+
+print("Written public-limited-company.json")

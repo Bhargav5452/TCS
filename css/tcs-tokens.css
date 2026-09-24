@@ -1,0 +1,100 @@
+:root {
+  /* ==========================================================================
+     Tirumala Consultancy Services - Brand Design Tokens
+     Approved Brand Colors: Deep Navy #0B3D91 & Sky Blue #2EA8F2
+     ========================================================================== */
+
+  /* Primary Brand Accents */
+  --tcs-primary: #0B3D91;
+  --tcs-primary-hover: #082C6A;
+  --tcs-primary-light: #F0F6FF;
+
+  /* Secondary / Accent */
+  --tcs-accent: #2EA8F2;
+  --tcs-accent-hover: #1A96E0;
+  --tcs-accent-light: #F0F8FF;
+  --tcs-accent-border: #BAE6FD;
+
+  /* Approved Selective CTA Gradient */
+  --tcs-cta-gradient: linear-gradient(135deg, #0B3D91 0%, #2EA8F2 100%);
+  --tcs-cta-gradient-hover: linear-gradient(135deg, #082C6A 0%, #1A96E0 100%);
+
+  /* In-Article Content Theme Variables (Replaces legacy IndiaFilings teal) */
+  --content-theme-color: var(--tcs-primary);
+  --content-theme-color-hover: var(--tcs-accent);
+
+  /* Single Consistent Neutral Family (Slate) */
+  --tcs-text-heading: #0F172A;       /* Slate 900 (Solid dark navy/slate for headings) */
+  --tcs-text-body: #334155;          /* Slate 700 */
+  --tcs-text-secondary: #475569;     /* Slate 600 */
+  --tcs-text-muted: #64748B;         /* Slate 500 */
+
+  /* Backgrounds & Surfaces */
+  --tcs-bg-base: #FFFFFF;
+  --tcs-bg-section: #F8FAFC;         /* Slate 50 */
+  --tcs-surface: #FFFFFF;
+  --tcs-surface-subtle: #F8FAFC;     /* Slate 50 */
+  --tcs-surface-hover: #F0F8FF;      /* Soft Sky wash */
+
+  /* Borders */
+  --tcs-border: #E2E8F0;             /* Slate 200 */
+  --tcs-border-subtle: #F1F5F9;      /* Slate 100 */
+  --tcs-border-interactive: #CBD5E1; /* Slate 300 */
+
+  /* Semantic Feedback & Status Colors (Preserved) */
+  --tcs-success: #10B981;            /* Emerald 500 */
+  --tcs-success-hover: #059669;
+  --tcs-success-light: #ECFDF5;
+  --tcs-warning: #F59E0B;            /* Amber 500 */
+  --tcs-warning-star: #FBBC04;       /* Rating star fill */
+  --tcs-error: #EF4444;              /* Red 500 */
+  --tcs-error-dark: #DC2626;
+
+  /* Backward-Compatibility Aliases */
+  --color-brand: var(--tcs-primary);
+  --color-brand-hover: var(--tcs-primary-hover);
+  --color-brand-light: var(--tcs-primary-light);
+  --color-accent: var(--tcs-accent);
+  --color-text: var(--tcs-text-heading);
+  --color-text-secondary: var(--tcs-text-body);
+  --color-text-muted: var(--tcs-text-muted);
+  --color-background: var(--tcs-bg-section);
+  --color-surface: var(--tcs-surface);
+  --color-surface-hover: var(--tcs-surface-hover);
+  --color-border: var(--tcs-border);
+  --color-border-subtle: var(--tcs-border-subtle);
+  --color-success: var(--tcs-success);
+  --color-warning: var(--tcs-warning);
+  --color-error: var(--tcs-error);
+
+  /* ==========================================================================
+     Responsive Fluid Typography Scale (Scales smoothly across 320px - 1440px+)
+     ========================================================================== */
+  --tcs-font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --tcs-font-size-hero-title: clamp(1.4rem, 3.8vw + 0.4rem, 2.25rem);
+  --tcs-font-size-hero-desc: clamp(0.8125rem, 0.8vw + 0.55rem, 0.9375rem);
+  --tcs-font-size-article-title: clamp(1.2rem, 2.8vw + 0.3rem, 1.625rem);
+  --tcs-font-size-section-h2: clamp(1.0625rem, 2vw + 0.25rem, 1.3rem);
+  --tcs-font-size-section-h3: clamp(0.9375rem, 1.5vw + 0.2rem, 1.1rem);
+  --tcs-font-size-section-h4: clamp(0.875rem, 0.8vw + 0.5rem, 0.9375rem);
+  --tcs-font-size-body: clamp(0.875rem, 0.4vw + 0.75rem, 0.9375rem);
+  --tcs-font-size-table: clamp(0.75rem, 0.5vw + 0.625rem, 0.875rem);
+  --tcs-font-size-faq-title: clamp(1.2rem, 2vw + 0.6rem, 1.625rem);
+  --tcs-font-size-faq-q: clamp(0.875rem, 0.6vw + 0.625rem, 0.9375rem);
+  --tcs-font-size-faq-a: clamp(0.8125rem, 0.5vw + 0.625rem, 0.90625rem);
+  --tcs-font-size-breadcrumb: clamp(0.75rem, 0.6vw + 0.55rem, 0.8125rem);
+  --tcs-font-size-caption: clamp(0.6875rem, 0.5vw + 0.5rem, 0.75rem);
+  --tcs-font-size-cta: clamp(0.875rem, 0.8vw + 0.6rem, 1rem);
+
+  /* Responsive Line Heights */
+  --tcs-line-height-tight: 1.28;
+  --tcs-line-height-heading: 1.35;
+  --tcs-line-height-subheading: 1.40;
+  --tcs-line-height-body: 1.65;
+  --tcs-line-height-faq: 1.65;
+
+  /* Responsive Touch Target Minimums */
+  --tcs-min-touch-target: 44px;
+  --tcs-touch-padding: 10px 14px;
+}

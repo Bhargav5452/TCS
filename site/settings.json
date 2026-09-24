@@ -1,0 +1,12 @@
+{
+  "name": "Tirumala Consultancy Services",
+  "contact": {
+    "placeholder": true,
+    "phone": null,
+    "email": null,
+    "url": null
+  },
+  "aliases": {
+    "private-limited-company": "company-registration"
+  }
+}

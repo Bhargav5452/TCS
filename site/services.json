@@ -1,0 +1,814 @@
+[
+  {
+    "id": "proprietorship",
+    "name": "Proprietorship",
+    "category": "Startup",
+    "url": "./proprietorship.html",
+    "source_url": "https://www.indiafilings.com/proprietorship"
+  },
+  {
+    "id": "partnership",
+    "name": "Partnership",
+    "category": "Startup",
+    "url": "./partnership.html",
+    "source_url": "https://www.indiafilings.com/partnership"
+  },
+  {
+    "id": "one-person-company",
+    "name": "One Person Company",
+    "category": "Startup",
+    "url": "./one-person-company.html",
+    "source_url": "https://www.indiafilings.com/one-person-company"
+  },
+  {
+    "id": "llp-registration",
+    "name": "Limited Liability Partnership",
+    "category": "Startup",
+    "url": "./llp-registration.html",
+    "source_url": "https://www.indiafilings.com/llp-registration"
+  },
+  {
+    "id": "company-registration",
+    "name": "Private Limited Company",
+    "category": "Startup",
+    "url": "./company-registration.html",
+    "source_url": "https://www.indiafilings.com/company-registration"
+  },
+  {
+    "id": "section-8-company-registration",
+    "name": "Section 8 Company",
+    "category": "Startup",
+    "url": "./section-8-company-registration.html",
+    "source_url": "https://www.indiafilings.com/section-8-company-registration"
+  },
+  {
+    "id": "trust-registration",
+    "name": "Trust Registration",
+    "category": "Startup",
+    "url": "./trust-registration.html",
+    "source_url": "https://www.indiafilings.com/trust-registration"
+  },
+  {
+    "id": "public-limited-company",
+    "name": "Public Limited Company",
+    "category": "Startup",
+    "url": "./public-limited-company.html",
+    "source_url": "https://www.indiafilings.com/public-limited-company"
+  },
+  {
+    "id": "producer-company-registration",
+    "name": "Producer Company",
+    "category": "Startup",
+    "url": "./producer-company-registration.html",
+    "source_url": "https://www.indiafilings.com/producer-company-registration"
+  },
+  {
+    "id": "indian-subsidiary",
+    "name": "Indian Subsidiary",
+    "category": "Startup",
+    "url": "./indian-subsidiary.html",
+    "source_url": "https://www.indiafilings.com/indian-subsidiary"
+  },
+  {
+    "id": "start-up-india",
+    "name": "Startup India",
+    "category": "Registrations",
+    "url": "./start-up-india.html",
+    "source_url": "https://www.indiafilings.com/start-up-india"
+  },
+  {
+    "id": "trade-license",
+    "name": "Trade License",
+    "category": "Registrations",
+    "url": "./trade-license.html",
+    "source_url": "https://www.indiafilings.com/trade-license"
+  },
+  {
+    "id": "fssai",
+    "name": "FSSAI Registration",
+    "category": "Registrations",
+    "url": "./fssai.html",
+    "source_url": "https://www.indiafilings.com/fssai"
+  },
+  {
+    "id": "fssai-license",
+    "name": "FSSAI License",
+    "category": "Registrations",
+    "url": "./fssai-license.html",
+    "source_url": "https://www.indiafilings.com/fssai-license"
+  },
+  {
+    "id": "halal-certificate",
+    "name": "Halal License & Certification",
+    "category": "Registrations",
+    "url": "./halal-certificate.html",
+    "source_url": "https://www.indiafilings.com/halal-certificate"
+  },
+  {
+    "id": "icegate-registration",
+    "name": "ICEGATE Registration",
+    "category": "Registrations",
+    "url": "./icegate-registration.html",
+    "source_url": "https://www.indiafilings.com/icegate-registration"
+  },
+  {
+    "id": "import-export-code",
+    "name": "Import Export Code",
+    "category": "Registrations",
+    "url": "./import-export-code.html",
+    "source_url": "https://www.indiafilings.com/import-export-code"
+  },
+  {
+    "id": "lei-code",
+    "name": "Legal Entity Identifier Code",
+    "category": "Registrations",
+    "url": "./lei-code.html",
+    "source_url": "https://www.indiafilings.com/lei-code"
+  },
+  {
+    "id": "iso-registration",
+    "name": "ISO Registration",
+    "category": "Registrations",
+    "url": "./iso-registration.html",
+    "source_url": "https://www.indiafilings.com/iso-registration"
+  },
+  {
+    "id": "pf-registration",
+    "name": "PF Registration",
+    "category": "Registrations",
+    "url": "./pf-registration.html",
+    "source_url": "https://www.indiafilings.com/pf-registration"
+  },
+  {
+    "id": "esi-registration",
+    "name": "ESI Registration",
+    "category": "Registrations",
+    "url": "./esi-registration.html",
+    "source_url": "https://www.indiafilings.com/esi-registration"
+  },
+  {
+    "id": "professional-tax-registration",
+    "name": "Professional Tax Registration",
+    "category": "Registrations",
+    "url": "./professional-tax-registration.html",
+    "source_url": "https://www.indiafilings.com/professional-tax-registration"
+  },
+  {
+    "id": "rcmc-registration",
+    "name": "RCMC Registration",
+    "category": "Registrations",
+    "url": "./rcmc-registration.html",
+    "source_url": "https://www.indiafilings.com/rcmc-registration"
+  },
+  {
+    "id": "rera-registration-agents",
+    "name": "TN RERA Registration for Agents",
+    "category": "Registrations",
+    "url": "./rera-registration-agents.html",
+    "source_url": "https://www.indiafilings.com/rera-registration-agents"
+  },
+  {
+    "id": "12a-80g-registration",
+    "name": "12A and 80G Registration",
+    "category": "Registrations",
+    "url": "./12a-80g-registration.html",
+    "source_url": "https://www.indiafilings.com/12a-80g-registration"
+  },
+  {
+    "id": "12a-registration",
+    "name": "12A Registration",
+    "category": "Registrations",
+    "url": "./12a-registration.html",
+    "source_url": "https://www.indiafilings.com/12a-registration"
+  },
+  {
+    "id": "80g-registration",
+    "name": "80G Registration",
+    "category": "Registrations",
+    "url": "./80g-registration.html",
+    "source_url": "https://www.indiafilings.com/80g-registration"
+  },
+  {
+    "id": "barcode-registration",
+    "name": "Barcode Registration",
+    "category": "Registrations",
+    "url": "./barcode-registration.html",
+    "source_url": "https://www.indiafilings.com/barcode-registration"
+  },
+  {
+    "id": "bis-certification",
+    "name": "BIS Registration",
+    "category": "Registrations",
+    "url": "./bis-certification.html",
+    "source_url": "https://www.indiafilings.com/bis-certification"
+  },
+  {
+    "id": "certificate-incumbency",
+    "name": "Certificate of Incumbency",
+    "category": "Registrations",
+    "url": "./certificate-incumbency.html",
+    "source_url": "https://www.indiafilings.com/certificate-incumbency"
+  },
+  {
+    "id": "darpan-registration",
+    "name": "Darpan Registration",
+    "category": "Registrations",
+    "url": "./darpan-registration.html",
+    "source_url": "https://www.indiafilings.com/darpan-registration"
+  },
+  {
+    "id": "digital-signature",
+    "name": "Digital Signature",
+    "category": "Registrations",
+    "url": "./digital-signature.html",
+    "source_url": "https://www.indiafilings.com/digital-signature"
+  },
+  {
+    "id": "shop-establishment-act-registration",
+    "name": "Shop Act Registration",
+    "category": "Registrations",
+    "url": "./shop-establishment-act-registration.html",
+    "source_url": "https://www.indiafilings.com/shop-establishment-act-registration"
+  },
+  {
+    "id": "udyam-registration",
+    "name": "Udyam Registration",
+    "category": "Registrations",
+    "url": "./udyam-registration.html",
+    "source_url": "https://www.indiafilings.com/udyam-registration"
+  },
+  {
+    "id": "fire-license",
+    "name": "Fire License",
+    "category": "Registrations",
+    "url": "./fire-license.html",
+    "source_url": "https://www.indiafilings.com/fire-license"
+  },
+  {
+    "id": "name-change",
+    "name": "Legal Name Change",
+    "category": "Registrations",
+    "url": "./name-change.html",
+    "source_url": "https://www.indiafilings.com/name-change"
+  },
+  {
+    "id": "water-testing",
+    "name": "Water Testing",
+    "category": "Registrations",
+    "url": "./water-testing.html",
+    "source_url": "https://www.indiafilings.com/water-testing"
+  },
+  {
+    "id": "food-testing",
+    "name": "Food Testing",
+    "category": "Registrations",
+    "url": "./food-testing.html",
+    "source_url": "https://www.indiafilings.com/food-testing"
+  },
+  {
+    "id": "trademark-registration",
+    "name": "Trademark Registration",
+    "category": "Trademark",
+    "url": "./trademark-registration.html",
+    "source_url": "https://www.indiafilings.com/trademark-registration"
+  },
+  {
+    "id": "trademark-objection",
+    "name": "Trademark Objection",
+    "category": "Trademark",
+    "url": "./trademark-objection.html",
+    "source_url": "https://www.indiafilings.com/trademark-objection"
+  },
+  {
+    "id": "trademark-registration-certificate",
+    "name": "Trademark Certificate",
+    "category": "Trademark",
+    "url": "./trademark-registration-certificate.html",
+    "source_url": "https://www.indiafilings.com/trademark-registration-certificate"
+  },
+  {
+    "id": "trademark-opposition",
+    "name": "Trademark Opposition",
+    "category": "Trademark",
+    "url": "./trademark-opposition.html",
+    "source_url": "https://www.indiafilings.com/trademark-opposition"
+  },
+  {
+    "id": "trademark-hearing",
+    "name": "Trademark Hearing",
+    "category": "Trademark",
+    "url": "./trademark-hearing.html",
+    "source_url": "https://www.indiafilings.com/trademark-hearing"
+  },
+  {
+    "id": "trademark-rectification",
+    "name": "Trademark Rectification",
+    "category": "Trademark",
+    "url": "./trademark-rectification.html",
+    "source_url": "https://www.indiafilings.com/trademark-rectification"
+  },
+  {
+    "id": "trademark-infringement-notice",
+    "name": "TM Infringement Notice",
+    "category": "Trademark",
+    "url": "./trademark-infringement-notice.html",
+    "source_url": "https://www.indiafilings.com/trademark-infringement-notice"
+  },
+  {
+    "id": "trademark-renewal",
+    "name": "Trademark Renewal",
+    "category": "Trademark",
+    "url": "./trademark-renewal.html",
+    "source_url": "https://www.indiafilings.com/trademark-renewal"
+  },
+  {
+    "id": "trademark-transfer",
+    "name": "Trademark Transfer",
+    "category": "Trademark",
+    "url": "./trademark-transfer.html",
+    "source_url": "https://www.indiafilings.com/trademark-transfer"
+  },
+  {
+    "id": "expedited-trademark-registration",
+    "name": "Expedited TM Registration",
+    "category": "Trademark",
+    "url": "./expedited-trademark-registration.html",
+    "source_url": "https://www.indiafilings.com/expedited-trademark-registration"
+  },
+  {
+    "id": "logo-designing",
+    "name": "Logo Designing",
+    "category": "Trademark",
+    "url": "./logo-designing.html",
+    "source_url": "https://www.indiafilings.com/logo-designing"
+  },
+  {
+    "id": "design-registration",
+    "name": "Design Registration",
+    "category": "Trademark",
+    "url": "./design-registration.html",
+    "source_url": "https://www.indiafilings.com/design-registration"
+  },
+  {
+    "id": "design-objection",
+    "name": "Design Objection",
+    "category": "Trademark",
+    "url": "./design-objection.html",
+    "source_url": "https://www.indiafilings.com/design-objection"
+  },
+  {
+    "id": "copyright-registration",
+    "name": "Copyright Registration",
+    "category": "Trademark",
+    "url": "./copyright-registration.html",
+    "source_url": "https://www.indiafilings.com/copyright-registration"
+  },
+  {
+    "id": "copyright-objection",
+    "name": "Copyright Objection",
+    "category": "Trademark",
+    "url": "./copyright-objection.html",
+    "source_url": "https://www.indiafilings.com/copyright-objection"
+  },
+  {
+    "id": "patent-registration",
+    "name": "Patent Registration",
+    "category": "Trademark",
+    "url": "./patent-registration.html",
+    "source_url": "https://www.indiafilings.com/patent-registration"
+  },
+  {
+    "id": "trademark-protection",
+    "name": "Trademark Protection",
+    "category": "Trademark",
+    "url": "./trademark-protection.html",
+    "source_url": "https://www.indiafilings.com/trademark-protection"
+  },
+  {
+    "id": "gst-registration",
+    "name": "GST Registration",
+    "category": "GST",
+    "url": "./gst-registration.html",
+    "source_url": "https://www.indiafilings.com/gst-registration"
+  },
+  {
+    "id": "gst-return-filing",
+    "name": "GST Return Filing by Accountant",
+    "category": "GST",
+    "url": "./gst-return-filing.html",
+    "source_url": "https://www.indiafilings.com/gst-return-filing"
+  },
+  {
+    "id": "gst-lut",
+    "name": "GST LUT Form",
+    "category": "GST",
+    "url": "./gst-lut.html",
+    "source_url": "https://www.indiafilings.com/gst-lut"
+  },
+  {
+    "id": "gst-notice",
+    "name": "GST Notice",
+    "category": "GST",
+    "url": "./gst-notice.html",
+    "source_url": "https://www.indiafilings.com/gst-notice"
+  },
+  {
+    "id": "gst-annual-return",
+    "name": "GST Annual Return Filing (GSTR-9)",
+    "category": "GST",
+    "url": "./gst-annual-return.html",
+    "source_url": "https://www.indiafilings.com/gst-annual-return"
+  },
+  {
+    "id": "gst-registration-for-foreigners",
+    "name": "GST Registration for Foreigners",
+    "category": "GST",
+    "url": "./gst-registration-for-foreigners.html",
+    "source_url": "https://www.indiafilings.com/gst-registration-for-foreigners"
+  },
+  {
+    "id": "gst-amendment",
+    "name": "GST Amendment",
+    "category": "GST",
+    "url": "./gst-amendment.html",
+    "source_url": "https://www.indiafilings.com/gst-amendment"
+  },
+  {
+    "id": "gst-revocation",
+    "name": "GST Revocation",
+    "category": "GST",
+    "url": "./gst-revocation.html",
+    "source_url": "https://www.indiafilings.com/gst-revocation"
+  },
+  {
+    "id": "gstr-10",
+    "name": "GSTR-10",
+    "category": "GST",
+    "url": "./gstr-10.html",
+    "source_url": "https://www.indiafilings.com/gstr-10"
+  },
+  {
+    "id": "virtual-office",
+    "name": "Virtual Office + GSTIN",
+    "category": "GST",
+    "url": "./virtual-office.html",
+    "source_url": "https://www.indiafilings.com/virtual-office"
+  },
+  {
+    "id": "income-tax-filing",
+    "name": "Income Tax E-Filing",
+    "category": "Income Tax",
+    "url": "./income-tax-filing.html",
+    "source_url": "https://www.indiafilings.com/income-tax-filing"
+  },
+  {
+    "id": "business-itr-filing",
+    "name": "Business ITR Filing",
+    "category": "Income Tax",
+    "url": "./business-itr-filing.html",
+    "source_url": "https://www.indiafilings.com/business-itr-filing"
+  },
+  {
+    "id": "itr-5-form",
+    "name": "Partnership Firm / LLP ITR",
+    "category": "Income Tax",
+    "url": "./itr-5-form.html",
+    "source_url": "https://www.indiafilings.com/itr-5-form"
+  },
+  {
+    "id": "itr-6-form",
+    "name": "Company ITR Filing",
+    "category": "Income Tax",
+    "url": "./itr-6-form.html",
+    "source_url": "https://www.indiafilings.com/itr-6-form"
+  },
+  {
+    "id": "itr-7-form",
+    "name": "Trust / NGO Tax Filing",
+    "category": "Income Tax",
+    "url": "./itr-7-form.html",
+    "source_url": "https://www.indiafilings.com/itr-7-form"
+  },
+  {
+    "id": "15ca-15cb-filing",
+    "name": "15CA - 15CB Filing",
+    "category": "Income Tax",
+    "url": "./15ca-15cb-filing.html",
+    "source_url": "https://www.indiafilings.com/15ca-15cb-filing"
+  },
+  {
+    "id": "tan-registration",
+    "name": "TAN Registration",
+    "category": "Income Tax",
+    "url": "./tan-registration.html",
+    "source_url": "https://www.indiafilings.com/tan-registration"
+  },
+  {
+    "id": "tds-return-filing",
+    "name": "TDS Return Filing",
+    "category": "Income Tax",
+    "url": "./tds-return-filing.html",
+    "source_url": "https://www.indiafilings.com/tds-return-filing"
+  },
+  {
+    "id": "income-tax-notice",
+    "name": "Income Tax Notice",
+    "category": "Income Tax",
+    "url": "./income-tax-notice.html",
+    "source_url": "https://www.indiafilings.com/income-tax-notice"
+  },
+  {
+    "id": "revised-return",
+    "name": "Revised ITR Return (ITR-U)",
+    "category": "Income Tax",
+    "url": "./revised-return.html",
+    "source_url": "https://www.indiafilings.com/revised-return"
+  },
+  {
+    "id": "company-annual-filing",
+    "name": "Company Compliance",
+    "category": "MCA",
+    "url": "./company-annual-filing.html",
+    "source_url": "https://www.indiafilings.com/company-annual-filing"
+  },
+  {
+    "id": "llp-annual-filing",
+    "name": "LLP Compliance",
+    "category": "MCA",
+    "url": "./llp-annual-filing.html",
+    "source_url": "https://www.indiafilings.com/llp-annual-filing"
+  },
+  {
+    "id": "opc-compliance",
+    "name": "OPC Compliance",
+    "category": "MCA",
+    "url": "./opc-compliance.html",
+    "source_url": "https://www.indiafilings.com/opc-compliance"
+  },
+  {
+    "id": "company-name-change",
+    "name": "Name Change - Company",
+    "category": "MCA",
+    "url": "./company-name-change.html",
+    "source_url": "https://www.indiafilings.com/company-name-change"
+  },
+  {
+    "id": "registered-office",
+    "name": "Registered Office Change",
+    "category": "MCA",
+    "url": "./registered-office.html",
+    "source_url": "https://www.indiafilings.com/registered-office"
+  },
+  {
+    "id": "dir-3-kyc",
+    "name": "DIN eKYC Filing",
+    "category": "MCA",
+    "url": "./dir-3-kyc.html",
+    "source_url": "https://www.indiafilings.com/dir-3-kyc"
+  },
+  {
+    "id": "din-reactivation",
+    "name": "DIN Reactivation",
+    "category": "MCA",
+    "url": "./din-reactivation.html",
+    "source_url": "https://www.indiafilings.com/din-reactivation"
+  },
+  {
+    "id": "appointment-of-director",
+    "name": "Director Change",
+    "category": "MCA",
+    "url": "./appointment-of-director.html",
+    "source_url": "https://www.indiafilings.com/appointment-of-director"
+  },
+  {
+    "id": "resignation-of-director",
+    "name": "Remove Director",
+    "category": "MCA",
+    "url": "./resignation-of-director.html",
+    "source_url": "https://www.indiafilings.com/resignation-of-director"
+  },
+  {
+    "id": "adt-1-filing",
+    "name": "ADT-1 Filing",
+    "category": "MCA",
+    "url": "./adt-1-filing.html",
+    "source_url": "https://www.indiafilings.com/adt-1-filing"
+  },
+  {
+    "id": "dpt-3-filing",
+    "name": "DPT-3 Filing",
+    "category": "MCA",
+    "url": "./dpt-3-filing.html",
+    "source_url": "https://www.indiafilings.com/dpt-3-filing"
+  },
+  {
+    "id": "llp-form-11",
+    "name": "LLP Form 11 Filing",
+    "category": "MCA",
+    "url": "./llp-form-11.html",
+    "source_url": "https://www.indiafilings.com/llp-form-11"
+  },
+  {
+    "id": "dormant-company",
+    "name": "Dormant Status Filing",
+    "category": "MCA",
+    "url": "./dormant-company.html",
+    "source_url": "https://www.indiafilings.com/dormant-company"
+  },
+  {
+    "id": "memorandum-of-association-amendment",
+    "name": "MOA Amendment",
+    "category": "MCA",
+    "url": "./memorandum-of-association-amendment.html",
+    "source_url": "https://www.indiafilings.com/memorandum-of-association-amendment"
+  },
+  {
+    "id": "aoa-amendment",
+    "name": "AOA Amendment",
+    "category": "MCA",
+    "url": "./aoa-amendment.html",
+    "source_url": "https://www.indiafilings.com/aoa-amendment"
+  },
+  {
+    "id": "authorized-capital",
+    "name": "Authorized Capital Increase",
+    "category": "MCA",
+    "url": "./authorized-capital.html",
+    "source_url": "https://www.indiafilings.com/authorized-capital"
+  },
+  {
+    "id": "company-share-transfer",
+    "name": "Share Transfer",
+    "category": "MCA",
+    "url": "./company-share-transfer.html",
+    "source_url": "https://www.indiafilings.com/company-share-transfer"
+  },
+  {
+    "id": "dematerialisation-shares",
+    "name": "Demat of Shares",
+    "category": "MCA",
+    "url": "./dematerialisation-shares.html",
+    "source_url": "https://www.indiafilings.com/dematerialisation-shares"
+  },
+  {
+    "id": "llp-winding-up",
+    "name": "Winding Up - LLP",
+    "category": "MCA",
+    "url": "./llp-winding-up.html",
+    "source_url": "https://www.indiafilings.com/llp-winding-up"
+  },
+  {
+    "id": "winding-up-of-a-company",
+    "name": "Winding Up - Company",
+    "category": "MCA",
+    "url": "./winding-up-of-a-company.html",
+    "source_url": "https://www.indiafilings.com/winding-up-of-a-company"
+  },
+  {
+    "id": "commencement-of-business-certificate",
+    "name": "Commencement (INC-20A)",
+    "category": "MCA",
+    "url": "./commencement-of-business-certificate.html",
+    "source_url": "https://www.indiafilings.com/commencement-of-business-certificate"
+  },
+  {
+    "id": "fdi-filing-with-rbi",
+    "name": "FDI Filing",
+    "category": "Compliance",
+    "url": "./fdi-filing-with-rbi.html",
+    "source_url": "https://www.indiafilings.com/fdi-filing-with-rbi"
+  },
+  {
+    "id": "odi-filing",
+    "name": "ODI Filing",
+    "category": "Compliance",
+    "url": "./odi-filing.html",
+    "source_url": "https://www.indiafilings.com/odi-filing"
+  },
+  {
+    "id": "fla-return-filing",
+    "name": "FLA Return Filing",
+    "category": "Compliance",
+    "url": "./fla-return-filing.html",
+    "source_url": "https://www.indiafilings.com/fla-return-filing"
+  },
+  {
+    "id": "fssai-renewal",
+    "name": "FSSAI Renewal",
+    "category": "Compliance",
+    "url": "./fssai-renewal.html",
+    "source_url": "https://www.indiafilings.com/fssai-renewal"
+  },
+  {
+    "id": "fssai-return-filing",
+    "name": "FSSAI Return Filing",
+    "category": "Compliance",
+    "url": "./fssai-return-filing.html",
+    "source_url": "https://www.indiafilings.com/fssai-return-filing"
+  },
+  {
+    "id": "business-plan",
+    "name": "Business Plan",
+    "category": "Compliance",
+    "url": "./business-plan.html",
+    "source_url": "https://www.indiafilings.com/business-plan"
+  },
+  {
+    "id": "payroll-management",
+    "name": "HR & Payroll",
+    "category": "Compliance",
+    "url": "./payroll-management.html",
+    "source_url": "https://www.indiafilings.com/payroll-management"
+  },
+  {
+    "id": "pf-return-filing",
+    "name": "PF Return Filing",
+    "category": "Compliance",
+    "url": "./pf-return-filing.html",
+    "source_url": "https://www.indiafilings.com/pf-return-filing"
+  },
+  {
+    "id": "esi-return-filing-due-date",
+    "name": "ESI Return Filing",
+    "category": "Compliance",
+    "url": "./esi-return-filing-due-date.html",
+    "source_url": "https://www.indiafilings.com/esi-return-filing-due-date"
+  },
+  {
+    "id": "professional-tax-return-filing",
+    "name": "Professional Tax Return Filing",
+    "category": "Compliance",
+    "url": "./professional-tax-return-filing.html",
+    "source_url": "https://www.indiafilings.com/professional-tax-return-filing"
+  },
+  {
+    "id": "partnership-tax-return-filing",
+    "name": "Partnership Compliance",
+    "category": "Compliance",
+    "url": "./partnership-tax-return-filing.html",
+    "source_url": "https://www.indiafilings.com/partnership-tax-return-filing"
+  },
+  {
+    "id": "proprietorship-compliance",
+    "name": "Proprietorship Compliance",
+    "category": "Compliance",
+    "url": "./proprietorship-compliance.html",
+    "source_url": "https://www.indiafilings.com/proprietorship-compliance"
+  },
+  {
+    "id": "bookkeeping-services",
+    "name": "Bookkeeping",
+    "category": "Compliance",
+    "url": "./bookkeeping-services.html",
+    "source_url": "https://www.indiafilings.com/bookkeeping-services"
+  },
+  {
+    "id": "online-ca-consultation",
+    "name": "CA Consultation",
+    "category": "Consultation",
+    "url": "./online-ca-consultation.html",
+    "source_url": "https://www.indiafilings.com/online-ca-consultation"
+  },
+  {
+    "id": "online-legal-consultation",
+    "name": "Legal Consultation",
+    "category": "Consultation",
+    "url": "./online-legal-consultation.html",
+    "source_url": "https://www.indiafilings.com/online-legal-consultation"
+  },
+  {
+    "id": "dubai-company-registration",
+    "name": "UAE Company Registration",
+    "category": "Global",
+    "url": "./dubai-company-registration.html",
+    "source_url": "https://www.indiafilings.com/dubai-company-registration"
+  },
+  {
+    "id": "usa-company-registration",
+    "name": "USA Company Registration",
+    "category": "Global",
+    "url": "./usa-company-registration.html",
+    "source_url": "https://www.indiafilings.com/usa-company-registration"
+  },
+  {
+    "id": "singapore-company-registration",
+    "name": "Singapore Business Setup",
+    "category": "Global",
+    "url": "./singapore-company-registration.html",
+    "source_url": "https://www.indiafilings.com/singapore-company-registration"
+  },
+  {
+    "id": "uk-company-registration",
+    "name": "UK Company Registration",
+    "category": "Global",
+    "url": "./uk-company-registration.html",
+    "source_url": "https://www.indiafilings.com/uk-company-registration"
+  },
+  {
+    "id": "usa-trademark-registration",
+    "name": "USA Trademark Registration",
+    "category": "Global",
+    "url": "./usa-trademark-registration.html",
+    "source_url": "https://www.indiafilings.com/usa-trademark-registration"
+  }
+]
