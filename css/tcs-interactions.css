@@ -2080,6 +2080,12 @@ html {
   gap: 56px !important;
 }
 
+@media (min-width: 1025px) {
+  .tcs-footer-main {
+    transform: translateX(40px) !important;
+  }
+}
+
 .tcs-footer-brand {
   width: 290px !important;
   max-width: 290px !important;
