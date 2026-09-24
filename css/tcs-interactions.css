@@ -2054,63 +2054,203 @@ html {
 }
 
 /* ==========================================================================
-   Footer 4-Column Layout & Responsive Spacing
+   TCS Minimal Graphy-Inspired Footer (Approved Master Layout)
    ========================================================================== */
-.ifLayoutFooter .ifFooterGrid {
-  display: grid !important;
-  grid-template-columns: 1fr !important;
-  gap: 2rem !important;
+.tcs-graphy-footer {
+  background-color: #ffffff !important;
+  color-scheme: light !important;
+  width: 100% !important;
+  border-top: 1px solid #f1f5f9 !important;
+  position: relative !important;
+  z-index: 10 !important;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
 }
 
-@media (min-width: 640px) {
-  .ifLayoutFooter .ifFooterGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 2.5rem !important;
+.tcs-footer-container {
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+  padding: 68px 32px 0 32px !important;
+  box-sizing: border-box !important;
+}
+
+.tcs-footer-main {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  gap: 48px !important;
+}
+
+.tcs-footer-brand {
+  max-width: 340px !important;
+  flex-shrink: 0 !important;
+}
+
+.tcs-footer-logo-wrap {
+  display: inline-block !important;
+  line-height: 0 !important;
+}
+
+.tcs-footer-logo {
+  height: 36px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+.tcs-footer-tagline {
+  font-size: 14.5px !important;
+  line-height: 1.6 !important;
+  color: #52525b !important;
+  margin: 18px 0 24px 0 !important;
+  font-weight: 400 !important;
+}
+
+.tcs-footer-socials {
+  display: flex !important;
+  align-items: center !important;
+  gap: 18px !important;
+}
+
+.tcs-footer-social-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #18181b !important;
+  text-decoration: none !important;
+  transition: color 0.15s ease, transform 0.15s ease !important;
+}
+
+.tcs-footer-social-btn:hover {
+  color: #0B3D91 !important;
+  transform: translateY(-1px) !important;
+}
+
+.tcs-footer-columns {
+  display: flex !important;
+  gap: 5rem !important;
+  justify-content: flex-end !important;
+  flex: 1 !important;
+}
+
+.tcs-footer-col {
+  min-width: 140px !important;
+}
+
+.tcs-footer-col-title {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #09090b !important;
+  margin: 0 0 20px 0 !important;
+  letter-spacing: -0.01em !important;
+}
+
+.tcs-footer-links {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 13px !important;
+}
+
+.tcs-footer-link {
+  font-size: 14px !important;
+  color: #52525b !important;
+  text-decoration: none !important;
+  transition: color 0.15s ease !important;
+  display: inline-block !important;
+  line-height: 1.45 !important;
+}
+
+.tcs-footer-link:hover {
+  color: #09090b !important;
+}
+
+.tcs-footer-divider {
+  border: 0 !important;
+  border-top: 1px solid #e4e4e7 !important;
+  margin: 56px 0 0 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+.tcs-footer-bottom {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 26px 0 36px 0 !important;
+  gap: 20px !important;
+  flex-wrap: wrap !important;
+}
+
+.tcs-footer-copyright {
+  font-size: 13.5px !important;
+  color: #71717a !important;
+  margin: 0 !important;
+  font-weight: 400 !important;
+}
+
+.tcs-footer-legal {
+  display: flex !important;
+  align-items: center !important;
+  gap: 28px !important;
+}
+
+.tcs-footer-legal-link {
+  font-size: 13.5px !important;
+  color: #71717a !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+  transition: color 0.15s ease !important;
+}
+
+.tcs-footer-legal-link:hover {
+  color: #09090b !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .tcs-footer-container {
+    padding: 48px 24px 0 24px !important;
   }
-}
-
-@media (min-width: 1024px) {
-  .ifLayoutFooter .ifFooterGrid {
-    grid-template-columns: 1.35fr 1fr 1fr 1fr !important;
-    gap: 2.5rem !important;
+  .tcs-footer-main {
+    flex-direction: column !important;
+    gap: 40px !important;
   }
-}
-
-@media (min-width: 1280px) {
-  .ifLayoutFooter .ifFooterGrid {
-    grid-template-columns: 1.4fr 1fr 1fr 1fr !important;
+  .tcs-footer-brand {
+    max-width: 100% !important;
+  }
+  .tcs-footer-columns {
+    width: 100% !important;
+    justify-content: flex-start !important;
     gap: 3.5rem !important;
   }
+  .tcs-footer-divider {
+    margin-top: 44px !important;
+  }
 }
 
-.ifLayoutFooter .ifFooterBrand {
-  max-width: 340px !important;
-}
-
-.ifLayoutFooter .ifFooterBrand p {
-  color: #475569 !important;
-  font-size: 15px !important;
-  line-height: 1.6 !important;
-  margin-top: 14px !important;
-}
-
-.ifLayoutFooter .ifFooterSectionTitle {
-  color: #0F172A !important;
-  font-size: 17px !important;
-  font-weight: 700 !important;
-  letter-spacing: -0.01em !important;
-  margin-bottom: 14px !important;
-}
-
-.ifLayoutFooter ul li span,
-.ifLayoutFooter ul li a {
-  font-size: 14.5px !important;
-  line-height: 1.5 !important;
-  color: #64748B !important;
-}
-
-.ifLayoutFooter ul li a:hover {
-  color: #0B3D91 !important;
+@media (max-width: 640px) {
+  .tcs-footer-container {
+    padding: 40px 18px 0 18px !important;
+  }
+  .tcs-footer-columns {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  .tcs-footer-bottom {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+    padding: 22px 0 30px 0 !important;
+  }
+  .tcs-footer-legal {
+    gap: 20px !important;
+  }
+  .tcs-footer-divider {
+    margin-top: 36px !important;
+  }
 }
 
 /* ==========================================================================
